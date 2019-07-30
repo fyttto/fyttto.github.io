@@ -96,22 +96,22 @@
 
 
 
-  <meta name="description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。">
-<meta name="keywords" content="JS学习">
+  <meta name="description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。  DOMDOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。">
+<meta name="keywords" content="-DOM">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" javascript高程学习--DOM（一)">
 <meta property="og:url" content="https://fyttto.github.io/2019/07/29/javascript高程学习-DOM（一/index.html">
 <meta property="og:site_name" content="yufeif">
-<meta property="og:description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。">
+<meta property="og:description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。  DOMDOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190519111142598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_17,color_000000,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190519173859827.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190519173946110.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190519174001278.png">
-<meta property="og:updated_time" content="2019-07-29T07:18:03.808Z">
+<meta property="og:updated_time" content="2019-07-30T12:38:22.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" javascript高程学习--DOM（一)">
-<meta name="twitter:description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。">
+<meta name="twitter:description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。  DOMDOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190519111142598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_17,color_000000,t_70">
 
 
@@ -199,7 +199,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -227,7 +227,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -244,7 +244,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
 
   </li>
         
@@ -261,7 +261,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
 
   </li>
         
@@ -366,19 +366,31 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-07-29 13:23:20 / Geändert am: 15:18:03" itemprop="dateCreated datePublished" datetime="2019-07-29T13:23:20+08:00">2019-07-29</time>
+              <time title="Created: 2019-07-29 13:23:20" itemprop="dateCreated datePublished" datetime="2019-07-29T13:23:20+08:00">2019-07-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-30 20:38:22" itemprop="dateModified" datetime="2019-07-30T20:38:22+08:00">2019-07-30</time>
               
             
           </span>
@@ -392,10 +404,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端学习路漫漫/" itemprop="url" rel="index"><span itemprop="name">前端学习路漫漫</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web前端/" itemprop="url" rel="index"><span itemprop="name">-Web前端</span></a></span>
 
                 
                 
@@ -433,8 +445,8 @@
         <blockquote>
 <p>由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。</p>
 </blockquote>
-<a id="more"></a>
 <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p><strong>DOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。</strong></p>
+<a id="more"></a>
 <h2 id="1-节点层次"><a href="#1-节点层次" class="headerlink" title="1.节点层次"></a>1.节点层次</h2><h3 id="DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。"><a href="#DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。" class="headerlink" title="DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。"></a>DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做<em>文档树</em>。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。</h3><p>比如下面一段代码的节点层次表示为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">		&lt;head&gt;</span><br><span class="line">			&lt;title&gt;Sample page&lt;/title&gt;</span><br><span class="line">		&lt;/head&gt;</span><br><span class="line">		&lt;body&gt;</span><br><span class="line">			&lt;p&gt;Hello Word!&lt;/p&gt;</span><br><span class="line">		&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
@@ -496,7 +508,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JS学习/" rel="tag"><i class="fa fa-tag"></i> JS学习</a>
+            <a href="/tags/DOM/" rel="tag"><i class="fa fa-tag"></i> -DOM</a>
           
         </div>
       
@@ -563,10 +575,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -589,7 +601,7 @@
                   <a href="/archives">
                 
                     <span class="site-state-item-count">4</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -604,7 +616,7 @@
                       
                     
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">Kategorien</span>
+                    <span class="site-state-item-name">categories</span>
                   
                 </div>
               
@@ -615,14 +627,22 @@
                 <div class="site-state-item site-state-tags">
                   
                     
+                      <a href="/tags/">
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">schlagwörter</span>
                   
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
                 </div>
               
             </nav>
@@ -691,7 +711,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
 
 
 
@@ -699,7 +719,7 @@
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
 
 
 
