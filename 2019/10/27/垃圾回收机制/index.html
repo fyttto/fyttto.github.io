@@ -96,13 +96,13 @@
 
 
 
-  <meta name="description" content="垃圾回收机制的基本概念">
-<meta name="keywords" content="内存问题">
+  <meta name="description" content="垃圾回收这篇博文主要是用来简单介绍下垃圾回收机制的原理。">
+<meta name="keywords" content="-垃圾回收">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" 垃圾回收机制">
-<meta property="og:url" content="https://fyttto.github.io/2019/07/29/垃圾回收机制/index.html">
+<meta property="og:title" content="垃圾回收机制">
+<meta property="og:url" content="https://fyttto.github.io/2019/10/27/垃圾回收机制/index.html">
 <meta property="og:site_name" content="yufeif">
-<meta property="og:description" content="垃圾回收机制的基本概念">
+<meta property="og:description" content="垃圾回收这篇博文主要是用来简单介绍下垃圾回收机制的原理。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190616200024720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190616204453149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70">
@@ -119,10 +119,10 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190616205616882.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190616205629679.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190616205649983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-07-29T07:24:41.294Z">
+<meta property="og:updated_time" content="2019-10-27T12:18:16.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" 垃圾回收机制">
-<meta name="twitter:description" content="垃圾回收机制的基本概念">
+<meta name="twitter:title" content="垃圾回收机制">
+<meta name="twitter:description" content="垃圾回收这篇博文主要是用来简单介绍下垃圾回收机制的原理。">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190616200024720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70">
 
 
@@ -131,7 +131,7 @@
 
   
   
-  <link rel="canonical" href="https://fyttto.github.io/2019/07/29/垃圾回收机制/">
+  <link rel="canonical" href="https://fyttto.github.io/2019/10/27/垃圾回收机制/">
 
 
 
@@ -141,7 +141,7 @@
   };
 </script>
 
-  <title> 垃圾回收机制 | yufeif</title>
+  <title>垃圾回收机制 | yufeif</title>
   
 
 
@@ -341,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2019/07/29/垃圾回收机制/">
+    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2019/10/27/垃圾回收机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yufei">
@@ -358,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"> 垃圾回收机制
+          <h1 class="post-title" itemprop="name headline">垃圾回收机制
 
               
             
@@ -384,7 +384,7 @@
                 
               
 
-              <time title="Erstellt: 2019-07-29 15:22:25 / Geändert am: 15:24:41" itemprop="dateCreated datePublished" datetime="2019-07-29T15:22:25+08:00">2019-07-29</time>
+              <time title="Erstellt: 2019-10-27 20:10:00 / Geändert am: 20:18:16" itemprop="dateCreated datePublished" datetime="2019-10-27T20:10:00+08:00">2019-10-27</time>
             
 
             
@@ -406,7 +406,7 @@
                 <span class="post-meta-item-text">in</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端学习路漫漫/" itemprop="url" rel="index"><span itemprop="name">前端学习路漫漫</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web前端/" itemprop="url" rel="index"><span itemprop="name">-Web前端</span></a></span>
 
                 
                 
@@ -441,15 +441,20 @@
       
 
       
-        <h1 id="垃圾回收机制的基本概念"><a href="#垃圾回收机制的基本概念" class="headerlink" title="垃圾回收机制的基本概念"></a>垃圾回收机制的基本概念</h1><a id="more"></a>
-<p><img src="https://img-blog.csdnimg.cn/20190616200024720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="老生代和新生代"><a href="#老生代和新生代" class="headerlink" title="老生代和新生代"></a>老生代和新生代</h1><p><img src="https://img-blog.csdnimg.cn/20190616204453149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="V8的垃圾回收机制"><a href="#V8的垃圾回收机制" class="headerlink" title="V8的垃圾回收机制"></a>V8的垃圾回收机制</h1><p><img src="https://img-blog.csdnimg.cn/20190616204600360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190616204625449.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <h1 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h1><p>这篇博文主要是用来简单介绍下垃圾回收机制的原理。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>以下图片均为博主个人所做</p>
+</blockquote>
+<h2 id="垃圾回收机制的基本概念"><a href="#垃圾回收机制的基本概念" class="headerlink" title="垃圾回收机制的基本概念"></a>垃圾回收机制的基本概念</h2><p><img src="https://img-blog.csdnimg.cn/20190616200024720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="老生代和新生代"><a href="#老生代和新生代" class="headerlink" title="老生代和新生代"></a>老生代和新生代</h2><p><img src="https://img-blog.csdnimg.cn/20190616204453149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="V8的垃圾回收机制"><a href="#V8的垃圾回收机制" class="headerlink" title="V8的垃圾回收机制"></a>V8的垃圾回收机制</h2><p><img src="https://img-blog.csdnimg.cn/20190616204600360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190616204625449.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><img src="https://img-blog.csdnimg.cn/20190616204638380.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="新生代的垃圾回收"><a href="#新生代的垃圾回收" class="headerlink" title="新生代的垃圾回收"></a>新生代的垃圾回收</h1><p><img src="https://img-blog.csdnimg.cn/20190616205408543.png" alt="在这里插入图片描述"></p>
+<h3 id="新生代的垃圾回收"><a href="#新生代的垃圾回收" class="headerlink" title="新生代的垃圾回收"></a>新生代的垃圾回收</h3><p><img src="https://img-blog.csdnimg.cn/20190616205408543.png" alt="在这里插入图片描述"></p>
 <p><img src="https://img-blog.csdnimg.cn/20190616205418785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><img src="https://img-blog.csdnimg.cn/20190616205431763.png" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190616200059276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190616205431763.png" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190616205510208.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="老生代的垃圾回收算法"><a href="#老生代的垃圾回收算法" class="headerlink" title="老生代的垃圾回收算法"></a>老生代的垃圾回收算法</h1><p><img src="https://img-blog.csdnimg.cn/20190616205608651.png" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190616205616882.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190616205629679.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190616205649983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="老生代的垃圾回收算法"><a href="#老生代的垃圾回收算法" class="headerlink" title="老生代的垃圾回收算法"></a>老生代的垃圾回收算法</h3><p><img src="https://img-blog.csdnimg.cn/20190616205608651.png" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190616205616882.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190616205629679.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190616205649983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
       
     </div>
@@ -473,7 +478,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/内存问题/" rel="tag"><i class="fa fa-tag"></i> 内存问题</a>
+            <a href="/tags/垃圾回收/" rel="tag"><i class="fa fa-tag"></i> -垃圾回收</a>
           
         </div>
       
@@ -486,8 +491,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/29/javascript高程学习-事件-一/" rel="next" title=" javascript高程学习--事件(一)">
-                <i class="fa fa-chevron-left"></i>  javascript高程学习--事件(一)
+              <a href="/2019/10/13/函数的拓展/" rel="next" title="函数的拓展">
+                <i class="fa fa-chevron-left"></i> 函数的拓展
               </a>
             
           </div>
@@ -565,7 +570,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -577,12 +582,16 @@
                 <div class="site-state-item site-state-categories">
                   
                     
+                      <a href="/categories/">
+                    
+                  
+                    
                     
                       
                     
                     <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">Kategorien</span>
-                  
+                  </a>
                 </div>
               
 
@@ -592,14 +601,26 @@
                 <div class="site-state-item site-state-tags">
                   
                     
+                      <a href="/tags/">
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">schlagwörter</span>
                   
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">schlagwörter</span>
+                  </a>
                 </div>
               
             </nav>
@@ -635,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#垃圾回收机制的基本概念"><span class="nav-number">1.</span> <span class="nav-text">垃圾回收机制的基本概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#老生代和新生代"><span class="nav-number">2.</span> <span class="nav-text">老生代和新生代</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#V8的垃圾回收机制"><span class="nav-number">3.</span> <span class="nav-text">V8的垃圾回收机制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#新生代的垃圾回收"><span class="nav-number">4.</span> <span class="nav-text">新生代的垃圾回收</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#老生代的垃圾回收算法"><span class="nav-number">5.</span> <span class="nav-text">老生代的垃圾回收算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#垃圾回收"><span class="nav-number">1.</span> <span class="nav-text">垃圾回收</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾回收机制的基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">垃圾回收机制的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#老生代和新生代"><span class="nav-number">1.2.</span> <span class="nav-text">老生代和新生代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#V8的垃圾回收机制"><span class="nav-number">1.3.</span> <span class="nav-text">V8的垃圾回收机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新生代的垃圾回收"><span class="nav-number">1.3.1.</span> <span class="nav-text">新生代的垃圾回收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#老生代的垃圾回收算法"><span class="nav-number">1.3.2.</span> <span class="nav-text">老生代的垃圾回收算法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

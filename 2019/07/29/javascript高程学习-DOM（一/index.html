@@ -108,7 +108,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190519173859827.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190519173946110.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190519174001278.png">
-<meta property="og:updated_time" content="2019-07-30T12:38:22.302Z">
+<meta property="og:updated_time" content="2019-10-27T12:11:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" javascript高程学习--DOM（一)">
 <meta name="twitter:description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。  DOMDOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。">
@@ -199,7 +199,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -227,7 +227,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Accueil</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
         
@@ -244,7 +244,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
 
   </li>
         
@@ -261,7 +261,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
 
   </li>
         
@@ -366,14 +366,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Post created: 2019-07-29 13:23:20" itemprop="dateCreated datePublished" datetime="2019-07-29T13:23:20+08:00">2019-07-29</time>
+              <time title="Erstellt: 2019-07-29 13:23:20" itemprop="dateCreated datePublished" datetime="2019-07-29T13:23:20+08:00">2019-07-29</time>
             
 
             
@@ -388,9 +388,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Edited on</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Updated at: 2019-07-30 20:38:22" itemprop="dateModified" datetime="2019-07-30T20:38:22+08:00">2019-07-30</time>
+                <time title="Geändert am: 2019-10-27 20:11:50" itemprop="dateModified" datetime="2019-10-27T20:11:50+08:00">2019-10-27</time>
               
             
           </span>
@@ -404,7 +404,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web前端/" itemprop="url" rel="index"><span itemprop="name">-Web前端</span></a></span>
@@ -450,7 +450,7 @@
 <h2 id="1-节点层次"><a href="#1-节点层次" class="headerlink" title="1.节点层次"></a>1.节点层次</h2><h3 id="DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。"><a href="#DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。" class="headerlink" title="DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。"></a>DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做<em>文档树</em>。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。</h3><p>比如下面一段代码的节点层次表示为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">		&lt;head&gt;</span><br><span class="line">			&lt;title&gt;Sample page&lt;/title&gt;</span><br><span class="line">		&lt;/head&gt;</span><br><span class="line">		&lt;body&gt;</span><br><span class="line">			&lt;p&gt;Hello Word!&lt;/p&gt;</span><br><span class="line">		&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://img-blog.csdnimg.cn/20190519111142598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_17,color_000000,t_70" alt="上面代码的文档层次关系">、</p>
+<p><img src="https://img-blog.csdnimg.cn/20190519111142598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_17,color_000000,t_70" alt="上面代码的文档层次关系"></p>
 <p>文档节点是每个文档的根节点。在这个🌰中文档节点只有一个子节点，就是HTML元素，该元素被称作<strong>文档元素</strong>。文档元素是文档的最外层结构。（每个文档只能有一个文档元素）</p>
 <blockquote>
 <p>在HTML中文档元素始终都是<html>元素。<br>在XML中，没有预定义的元素，文档元素可以是任何元素</html></p>
@@ -575,10 +575,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table Des Matières
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Ensemble
+            Übersicht
           </li>
         </ul>
       
@@ -600,8 +600,8 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">articles</span>
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -620,7 +620,7 @@
                       
                     
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">categories</span>
+                    <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
               
@@ -646,8 +646,10 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">tags</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">schlagwörter</span>
                   </a>
                 </div>
               
@@ -717,7 +719,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
 
 
 
@@ -725,7 +727,7 @@
 
 
 
-  <div class="theme-info">Thème – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
 
 
 
