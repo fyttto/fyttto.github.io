@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,17 +49,19 @@
 <link rel="stylesheet" href="/css/main.css?v=7.1.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png?v=7.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png?v=7.1.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/feng.jpg?v=7.1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png?v=7.1.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+  <link rel="mask-icon" href="/images/avatar.png?v=7.1.0" color="#222">
 
+
+  <link rel="manifest" href="/images/avatar.png">
 
 
 
@@ -103,13 +105,13 @@
 <meta property="og:url" content="https://fyttto.github.io/2019/11/18/响应式布局/index.html">
 <meta property="og:site_name" content="yufeif">
 <meta property="og:description" content="响应式布局为什么要有响应式布局越来越多的智能移动设备（ mobile, tablet device ）加入到互联网中来，移动互联网不再是独立的小网络了，而是成为了 Internet 的重要组成部分。响应式网络设计 （ RWD / AWD）的出现">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9waWMyLnpoaW1nLmNvbS81MC92Mi05NmY3ZjFkNzQyMzNiOTg4YWM4MjhmYjI1MmI0MjE5ZF9oZC53ZWJw?x-oss-process=image/format,png">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/4/8/169fa8fe7ac87fa5?imageslim">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/4/8/169fb9d770ad1553?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/9/7/5b4ed0564e0822c2ffd7080e76282459?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/9/7/5b4ed0564e0822c2ffd7080e76282459?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2019-11-21T10:39:50.096Z">
+<meta property="og:updated_time" content="2019-11-21T11:37:23.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="响应式布局">
 <meta name="twitter:description" content="响应式布局为什么要有响应式布局越来越多的智能移动设备（ mobile, tablet device ）加入到互联网中来，移动互联网不再是独立的小网络了，而是成为了 Internet 的重要组成部分。响应式网络设计 （ RWD / AWD）的出现">
@@ -172,7 +174,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -200,7 +202,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -228,7 +230,24 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
         
@@ -245,7 +264,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
         
@@ -262,14 +281,14 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
         
         
           
-          <li class="menu-item menu-item-commonweal">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -279,7 +298,7 @@
 
     
 
-    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>Commonweal 404</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
 
@@ -334,7 +353,7 @@
     <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2019/11/18/响应式布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yufei">
+      <meta itemprop="name" content="fengyufei">
       <meta itemprop="description" content="a front-end engineer who is learning">
       <meta itemprop="image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMhc_k4SLYULPc6uU12vLi6zJzRNdqPxfdJnzPRKCgAKJCsv5_g">
     </span>
@@ -367,14 +386,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-11-18 21:13:01" itemprop="dateCreated datePublished" datetime="2019-11-18T21:13:01+08:00">2019-11-18</time>
+              <time title="创建时间：2019-11-18 21:13:01" itemprop="dateCreated datePublished" datetime="2019-11-18T21:13:01+08:00">2019-11-18</time>
             
 
             
@@ -389,9 +408,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">更新于</span>
                 
-                <time title="Geändert am: 2019-11-21 18:39:50" itemprop="dateModified" datetime="2019-11-21T18:39:50+08:00">2019-11-21</time>
+                <time title="修改时间：2019-11-21 19:37:23" itemprop="dateModified" datetime="2019-11-21T19:37:23+08:00">2019-11-21</time>
               
             
           </span>
@@ -405,7 +424,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web前端/" itemprop="url" rel="index"><span itemprop="name">-Web前端</span></a></span>
@@ -459,14 +478,103 @@
 <p>我们在使用时需要注意，不管是大屏幕还是小屏幕（移动端或PC端），当屏幕大小变化时，后面的样式会覆盖前面的样式。因此移动端优先使用的是<code>min-width</code>，而PC端使用的是<code>max-width</code>。</p>
 </blockquote>
 <p>当<strong>移动端</strong>优先时：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* iphone6 7 8 */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* iphone 5 */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">320px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">      <span class="attribute">background-color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* iphoneX */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">375px</span>) and (-webkit-device-pixel-ratio: <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">      <span class="attribute">background-color</span>: <span class="number">#0FF000</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* iphone6 7 8 plus */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">414px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">      <span class="attribute">background-color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* ipad */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">768px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">      <span class="attribute">background-color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* ipad pro */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">1024px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">      <span class="attribute">background-color</span>: <span class="number">#FF00FF</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* pc */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">1100px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">      <span class="attribute">background-color</span>: black;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="css">/* iphone6 7 8 */
+body {
+    background-color: yellow;
+}
+/* iphone 5 */
+@media screen and (max-width: 320px) {
+    body {
+      background-color: red;
+    }
+}
+/* iphoneX */
+@media screen and (min-width: 375px) and (-webkit-device-pixel-ratio: 3) {
+    body {
+      background-color: #0FF000;
+    }
+}
+/* iphone6 7 8 plus */
+@media screen and (min-width: 414px) {
+    body {
+      background-color: blue;
+    }
+}
+/* ipad */
+@media screen and (min-width: 768px) {
+    body {
+      background-color: green;
+    }
+}
+/* ipad pro */
+@media screen and (min-width: 1024px) {
+    body {
+      background-color: #FF00FF;
+    }
+}
+/* pc */
+@media screen and (min-width: 1100px) {
+    body {
+      background-color: black;
+    }
+}
+</code></pre>
 <p>当<strong>PC端</strong>优先时：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* pc width &gt; 1024px */</span></span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">/* ipad pro */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">1024px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#FF00FF</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* ipad */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">768px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* iphone6 7 8 plus */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">414px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* iphoneX */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">375px</span>) and (-webkit-device-pixel-ratio: <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#0FF000</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* iphone6 7 8 */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">375px</span>) and (-webkit-device-pixel-ratio: <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#0FF000</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* iphone5 */</span></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">320px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#0FF000</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="css">/* pc width &gt; 1024px */
+    body {
+        background-color: yellow;
+    }
+/* ipad pro */
+@media screen and (max-width: 1024px) {
+    body {
+        background-color: #FF00FF;
+    }
+}
+/* ipad */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: green;
+    }
+}
+/* iphone6 7 8 plus */
+@media screen and (max-width: 414px) {
+    body {
+        background-color: blue;
+    }
+}
+/* iphoneX */
+@media screen and (max-width: 375px) and (-webkit-device-pixel-ratio: 3) {
+    body {
+        background-color: #0FF000;
+    }
+}
+/* iphone6 7 8 */
+@media screen and (max-width: 375px) and (-webkit-device-pixel-ratio: 2) {
+    body {
+        background-color: #0FF000;
+    }
+}
+/* iphone5 */
+@media screen and (max-width: 320px) {
+    body {
+        background-color: #0FF000;
+    }
+}
+</code></pre>
 <h3 id="2-百分比布局"><a href="#2-百分比布局" class="headerlink" title="2.百分比布局"></a>2.百分比布局</h3><p>我们可以通过<strong>百分比单位</strong>，使得浏览器中的元素随着浏览器的高度变化而变化，，从而实现<strong>响应式</strong>的效果。类似的我们知道响应式布局中的<em>Bootstrap</em>中的<strong>栅格系统</strong>就是利用百分比来定义元素的宽高。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* pc width &gt; 1100px */</span></span><br><span class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span> &#123; <span class="attribute">margin</span>: <span class="number">0</span>;<span class="attribute">padding</span>: <span class="number">0</span>;<span class="attribute">width</span>: <span class="number">100%</span>;<span class="attribute">height</span>: <span class="number">100%</span>;&#125;</span><br><span class="line"><span class="selector-tag">aside</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">main</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="css">/* pc width &gt; 1100px */
+html, body { margin: 0;padding: 0;width: 100%;height: 100%;}
+aside {
+    width: 10%;
+    height: 100%;
+    background-color: red;
+    float: left;
+}
+main {
+    height: 100%;
+    background-color: blue;
+    overflow: hidden;
+}</code></pre>
 <p>现在我们必须要知道这个百分比是以什么元素的大小为基准点的：</p>
 <ol>
 <li><p>子元素的基准点的<code>height</code>或<code>width</code>中设置百分比，是相对于子元素的直接父元素，<code>width</code>相对于父元素的<code>width</code>,<code>height</code>相对于父元素的<code>height</code>;</p>
@@ -530,15 +638,58 @@
 <p>对比中我们可以发现，vw单位与百分比类似，单确有区别，前面我们介绍了百分比单位的换算困难，这里的vw更像”理想的百分比单位”。任意层级元素，在使用vw单位的情况下，1vw都等于视图宽度的百分之一。</p>
 <p>vw和%的区别为：<br>|单位|依赖于|<br>|–|–|<br>|%|元素的祖先元素|<br>|vh/vw|视口的尺寸|</p>
 <p>单纯的使用vm和vw单位，是这样子的：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"> &lt; div class="mod_nav"&gt;</span><br><span class="line">            &lt; nav class="mod_nav_list" v-for="n in 5"&gt;</span><br><span class="line">                &lt; a href="#" class="mod_nav_list_item"&gt;</span><br><span class="line">                    &lt; span class="mod_nav_list_item_logo"&gt;</span><br><span class="line">                &lt; img src="http://jdc.jd.com/img/80"&gt;</span><br><span class="line">                    &lt; /span&gt;</span><br><span class="line">                    &lt; p class="mod_nav_list_item_name"&gt;导航入口&lt; /p&gt;</span><br><span class="line">                &lt; /a&gt;</span><br><span class="line">            &lt; /nav&gt;</span><br><span class="line">&lt; /div&gt;</span><br><span class="line"><span class="selector-class">.mod_nav</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">    &amp;_list &#123;</span><br><span class="line">        <span class="selector-tag">display</span>: <span class="selector-tag">flex</span>;</span><br><span class="line">        <span class="selector-tag">padding</span>: <span class="selector-tag">vm</span>(15) <span class="selector-tag">vm</span>(10) <span class="selector-tag">vm</span>(10);</span><br><span class="line">        &amp;_<span class="selector-tag">item</span> &#123;</span><br><span class="line">            <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">            <span class="attribute">text-align</span>: center;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="built_in">vm</span>(10);</span><br><span class="line">            &amp;_logo &#123;</span><br><span class="line">                <span class="selector-tag">display</span>: <span class="selector-tag">block</span>;</span><br><span class="line">                <span class="selector-tag">margin</span>: 0 <span class="selector-tag">auto</span>;</span><br><span class="line">                <span class="selector-tag">width</span>: <span class="selector-tag">vm</span>(40);</span><br><span class="line">                <span class="selector-tag">height</span>: <span class="selector-tag">vm</span>(40);</span><br><span class="line">                <span class="selector-tag">img</span> &#123;</span><br><span class="line">                    <span class="attribute">display</span>: block;</span><br><span class="line">                    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">                    <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            &amp;_<span class="selector-tag">name</span> &#123;</span><br><span class="line">                <span class="attribute">margin-top</span>: <span class="built_in">vm</span>(2);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="css"> &lt; div class=&quot;mod_nav&quot;&gt;
+            &lt; nav class=&quot;mod_nav_list&quot; v-for=&quot;n in 5&quot;&gt;
+                &lt; a href=&quot;#&quot; class=&quot;mod_nav_list_item&quot;&gt;
+                    &lt; span class=&quot;mod_nav_list_item_logo&quot;&gt;
+                &lt; img src=&quot;http://jdc.jd.com/img/80&quot;&gt;
+                    &lt; /span&gt;
+                    &lt; p class=&quot;mod_nav_list_item_name&quot;&gt;导航入口&lt; /p&gt;
+                &lt; /a&gt;
+            &lt; /nav&gt;
+&lt; /div&gt;
+.mod_nav {
+    background: #fff;
+    &amp;_list {
+        display: flex;
+        padding: vm(15) vm(10) vm(10);
+        &amp;_item {
+            flex: 1;
+            text-align: center;
+            font-size: vm(10);
+            &amp;_logo {
+                display: block;
+                margin: 0 auto;
+                width: vm(40);
+                height: vm(40);
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 100%;
+                }
+            }
+            &amp;_name {
+                margin-top: vm(2);
+            }
+        }
+    }
+}</code></pre>
 <p>效果是这样子的：<br><img src="https://user-gold-cdn.xitu.io/2017/9/7/5b4ed0564e0822c2ffd7080e76282459?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="效果图"></p>
 <h3 id="5-图片自适应"><a href="#5-图片自适应" class="headerlink" title="5.图片自适应"></a>5.图片自适应</h3><p>图片自适应指的是同一张图片在不同的浏览器宽度下有着不同的大小，即随着浏览器大小的变化，图片大小也跟着压缩，拉伸。</p>
 <h3 id="1-使用max-width（图片自适应）"><a href="#1-使用max-width（图片自适应）" class="headerlink" title="1.使用max-width（图片自适应）"></a>1.使用max-width（图片自适应）</h3><p>可以使用下面的代码：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="CSS">
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+<h3 id="2-使用background-image"><a href="#2-使用background-image" class="headerlink" title="2.使用background-image"></a>2.使用<code>background-image</code></h3><pre><code class="css">.banner{
+  background-image: url(/static/large.jpg);
+}
 
-<h3 id="2-使用background-image"><a href="#2-使用background-image" class="headerlink" title="2.使用background-image"></a>2.使用<code>background-image</code></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.banner</span>&#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(/static/large.jpg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">767px</span>)&#123;</span><br><span class="line">  background-image: url(/static/small.jpg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+@media screen and (max-width: 767px){
+  background-image: url(/static/small.jpg);
+}</code></pre>
 <blockquote>
 <p>还有两种方法，使用到了引入外部资源，过于繁琐且不经常使用，所以就不做过多的介绍了。</p>
 </blockquote>
@@ -633,10 +784,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -645,9 +796,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMhc_k4SLYULPc6uU12vLi6zJzRNdqPxfdJnzPRKCgAKJCsv5_g" alt="yufei">
+              <img class="site-author-image" itemprop="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMhc_k4SLYULPc6uU12vLi6zJzRNdqPxfdJnzPRKCgAKJCsv5_g" alt="fengyufei">
             
-              <p class="site-author-name" itemprop="name">yufei</p>
+              <p class="site-author-name" itemprop="name">fengyufei</p>
               <div class="site-description motion-element" itemprop="description">a front-end engineer who is learning</div>
           </div>
 
@@ -656,10 +807,10 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives">
+                  <a href="/archives/">
                 
                     <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
@@ -678,7 +829,7 @@
                       
                     
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">Kategorien</span>
+                    <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
               
@@ -709,7 +860,7 @@
                       
                     
                     <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">schlagwörter</span>
+                    <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
               
@@ -720,6 +871,43 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/fyttto" title="GitHub &rarr; https://github.com/fyttto" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:fengyufei139@gmail.com" title="E-Mail &rarr; mailto:fengyufei139@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-E-Mail"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.csdn.net/weixin_43939379" title="csdn &rarr; https://blog.csdn.net/weixin_43939379" rel="noopener" target="_blank"><i class="fa fa-fw fa-csdn"></i>csdn</a>
+                </span>
+              
+            </div>
           
 
           
@@ -771,7 +959,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">yufei</span>
+  <span class="author" itemprop="copyrightHolder">fengyufei</span>
 
   
 
@@ -779,7 +967,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
@@ -787,7 +975,7 @@
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
 
 
 
