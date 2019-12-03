@@ -113,7 +113,7 @@
 </style>
 
   <meta name="description" content="垃圾回收这篇博文主要是用来简单介绍下垃圾回收机制的原理。">
-<meta name="keywords" content="-垃圾回收">
+<meta name="keywords" content="内存管理,垃圾回收">
 <meta property="og:type" content="article">
 <meta property="og:title" content="垃圾回收机制">
 <meta property="og:url" content="https://fyttto.github.io/2019/10/27/垃圾回收机制/index.html">
@@ -135,7 +135,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190616205616882.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190616205629679.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190616205649983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-10-27T12:18:16.792Z">
+<meta property="og:updated_time" content="2019-12-03T09:13:43.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="垃圾回收机制">
 <meta name="twitter:description" content="垃圾回收这篇博文主要是用来简单介绍下垃圾回收机制的原理。">
@@ -417,12 +417,24 @@
                 
               
 
-              <time title="创建时间：2019-10-27 20:10:00 / 修改时间：20:18:16" itemprop="dateCreated datePublished" datetime="2019-10-27T20:10:00+08:00">2019-10-27</time>
+              <time title="创建时间：2019-10-27 20:10:00" itemprop="dateCreated datePublished" datetime="2019-10-27T20:10:00+08:00">2019-10-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-03 17:13:43" itemprop="dateModified" datetime="2019-12-03T17:13:43+08:00">2019-12-03</time>
               
             
           </span>
@@ -439,7 +451,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web前端/" itemprop="url" rel="index"><span itemprop="name">-Web前端</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web前端/" itemprop="url" rel="index"><span itemprop="name">Web前端</span></a></span>
 
                 
                 
@@ -511,7 +523,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/垃圾回收/" rel="tag"><i class="fa fa-tag"></i> -垃圾回收</a>
+            <a href="/tags/内存管理/" rel="tag"><i class="fa fa-tag"></i> 内存管理</a>
+          
+            <a href="/tags/垃圾回收/" rel="tag"><i class="fa fa-tag"></i> 垃圾回收</a>
           
         </div>
       
@@ -524,8 +538,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/13/函数的拓展/" rel="next" title="函数的拓展">
-                <i class="fa fa-chevron-left"></i> 函数的拓展
+              <a href="/2019/09/22/ES6中的变量赋值以及解构赋值/" rel="next" title=" ES6中的变量声明 ">
+                <i class="fa fa-chevron-left"></i>  ES6中的变量声明 
               </a>
             
           </div>
@@ -626,6 +640,8 @@
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -657,7 +673,25 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

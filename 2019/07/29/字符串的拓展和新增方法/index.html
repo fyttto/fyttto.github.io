@@ -112,18 +112,18 @@
     }
 </style>
 
-  <meta name="description" content="字符串的拓展与新增方法字符串拓展字符串的表示法论表示一个字符我们可以使用的方法有什么？">
-<meta name="keywords" content="-ES6 -字符串">
+  <meta name="description" content="在这篇博文里，我们会了解到一些在ES6中的一些字符的新特性。">
+<meta name="keywords" content="ES6,字符与字符串">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈ES6字符串拓展">
+<meta property="og:title" content=" ES6字符串 ">
 <meta property="og:url" content="https://fyttto.github.io/2019/07/29/字符串的拓展和新增方法/index.html">
 <meta property="og:site_name" content="yufeif">
-<meta property="og:description" content="字符串的拓展与新增方法字符串拓展字符串的表示法论表示一个字符我们可以使用的方法有什么？">
+<meta property="og:description" content="在这篇博文里，我们会了解到一些在ES6中的一些字符的新特性。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-19T12:14:48.670Z">
+<meta property="og:updated_time" content="2019-12-03T09:10:31.950Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈ES6字符串拓展">
-<meta name="twitter:description" content="字符串的拓展与新增方法字符串拓展字符串的表示法论表示一个字符我们可以使用的方法有什么？">
+<meta name="twitter:title" content=" ES6字符串 ">
+<meta name="twitter:description" content="在这篇博文里，我们会了解到一些在ES6中的一些字符的新特性。">
 
 
 
@@ -141,7 +141,7 @@
   };
 </script>
 
-  <title>浅谈ES6字符串拓展 | yufeif</title>
+  <title> ES6字符串  | yufeif</title>
   
 
 
@@ -375,7 +375,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈ES6字符串拓展
+          <h1 class="post-title" itemprop="name headline"> ES6字符串 
 
               
             
@@ -418,7 +418,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-19 20:14:48" itemprop="dateModified" datetime="2019-09-19T20:14:48+08:00">2019-09-19</time>
+                <time title="修改时间：2019-12-03 17:10:31" itemprop="dateModified" datetime="2019-12-03T17:10:31+08:00">2019-12-03</time>
               
             
           </span>
@@ -435,7 +435,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web前端/" itemprop="url" rel="index"><span itemprop="name">-Web前端</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web前端/" itemprop="url" rel="index"><span itemprop="name">Web前端</span></a></span>
 
                 
                 
@@ -470,8 +470,10 @@
       
 
       
-        <h1 id="字符串的拓展与新增方法"><a href="#字符串的拓展与新增方法" class="headerlink" title="字符串的拓展与新增方法"></a>字符串的拓展与新增方法</h1><h2 id="字符串拓展"><a href="#字符串拓展" class="headerlink" title="字符串拓展"></a>字符串拓展</h2><h3 id="字符串的表示法"><a href="#字符串的表示法" class="headerlink" title="字符串的表示法"></a>字符串的表示法</h3><p>论表示一个字符我们可以使用的方法有什么？</p>
+        <p>在这篇博文里，我们会了解到一些在<code>ES6</code>中的一些字符的新特性。</p>
 <a id="more"></a>
+
+<h1 id="字符串的拓展与新增方法"><a href="#字符串的拓展与新增方法" class="headerlink" title="字符串的拓展与新增方法"></a>字符串的拓展与新增方法</h1><h2 id="字符串拓展"><a href="#字符串拓展" class="headerlink" title="字符串拓展"></a>字符串拓展</h2><h3 id="字符串的表示法"><a href="#字符串的表示法" class="headerlink" title="字符串的表示法"></a>字符串的表示法</h3><p>论表示一个字符我们可以使用的方法有什么？</p>
 <pre><code class="javascript">&#39;\z&#39; === &#39;z&#39;    //true
 &#39;\172&#39; === &#39;z&#39;    //true
 &#39; \x7A&#39; === &#39;z&#39; //true
@@ -480,17 +482,17 @@
 <blockquote>
 <p>上面描述的方法都是可以用表示字符的。</p>
 </blockquote>
-<p>在ES6中加强了对Unicode的支持，允许采用<code>\uxxxx</code>形式表示一个字符，其中的xxxx表示字符的Unicode 码点。但是使用这种方式表示一个字符时，码点只限于在<code>\u0000</code> ~<code>\uFFFF</code>之间。超出这个范围的字符必须用两个双字节的形式表示。</p>
+<p>在<code>ES6</code>中加强了对Unicode的支持，允许采用<code>\uxxxx</code>形式表示一个字符，其中的<code>xxxx</code>表示字符的Unicode 码点。但是使用这种方式表示一个字符时，码点只限于在<code>\u0000</code> ~<code>\uFFFF</code>之间。超出这个范围的字符必须用两个双字节的形式表示。</p>
 <pre><code class="javascript">&quot;\uD842\uDFB7&quot;
 // &quot;𠮷&quot;</code></pre>
 <p>上面的那个字就是一个典型的双字节表示。除了这种方法可以表示码点超出<code>\0xFFFF</code>的字符，还可以直接将码点中的数值放进大括号里，如：</p>
 <pre><code class="javascript">&#39;\u{1F680}&#39; === &#39;\uD83D\uDE80&#39;
 // true</code></pre>
 <blockquote>
-<p>ES6 对这一点做出了改进，只要将码点放入大括号，就能正确解读该字符。</p>
+<p><code>ES6</code> 对这一点做出了改进，只要将码点放入大括号，就能正确解读该字符。</p>
 </blockquote>
-<p>而且上面的例子表明，大括号表示法和四字节的UTF-16编码等价，所以我们一共有6种方法可以表示一个字符。</p>
-<h3 id="字符串的遍历器接口"><a href="#字符串的遍历器接口" class="headerlink" title="字符串的遍历器接口"></a>字符串的遍历器接口</h3><p>ES6 为字符串添加了遍历器接口，使得字符串可以被<code>for...of</code>循环遍历。</p>
+<p>而且上面的例子表明，大括号表示法和四字节的<code>UTF-16</code>编码等价，所以我们一共有6种方法可以表示一个字符。</p>
+<h3 id="字符串的遍历器接口"><a href="#字符串的遍历器接口" class="headerlink" title="字符串的遍历器接口"></a>字符串的遍历器接口</h3><p><code>ES6</code> 为字符串添加了遍历器接口，使得字符串可以被<code>for...of</code>循环遍历。</p>
 <pre><code class="javascript">for (let codePoint of &#39;foo&#39;) {
   console.log(codePoint);
 }
@@ -513,13 +515,13 @@ for (let i of text) {
 <h3 id="直接输入字符"><a href="#直接输入字符" class="headerlink" title="直接输入字符"></a>直接输入字符</h3><p>JavaScript 字符串允许直接输入字符，以及输入字符的转义形式。</p>
 <pre><code class="javascript">&#39;中&#39;===&#39;\u4e2d&#39;     //true</code></pre>
 <blockquote>
-<p>但是，JavaScript 规定有5个字符，不能在字符串里面直接使用，只能使用转义形式。<br>U+005C：反斜杠（reverse solidus)<br>U+000D：回车（carriage return）<br>U+2028：行分隔符（line separator）<br>U+2029：段分隔符（paragraph separator）<br>U+000A：换行符（line feed）</p>
+<p>但是，JavaScript 规定有5个字符，不能在字符串里面直接使用，只能使用转义形式。<br>``U+005C<code>：反斜杠（reverse solidus)</code>U+000D<code>：回车（carriage return）</code>U+2028<code>：行分隔符（line separator）</code>U+2029<code>：段分隔符（paragraph separator）</code>U+000A`：换行符（line feed）</p>
 </blockquote>
 <p>在字符串中如果像使用反斜杠一定要转义写成<code>\\</code>或者使用<code>&#39;\u005c&#39;</code>。</p>
-<h2 id="JSON-stringify-的改造"><a href="#JSON-stringify-的改造" class="headerlink" title="JSON.stringify()的改造"></a>JSON.stringify()的改造</h2><p>为了防止返回不符合UTF-8标准的编码，<code>JSON.stringify()</code>做了改造 ——如果遇到<code>0xD800</code>到<code>0xDFFF</code>之间的单个码点，或者不存在的配对形式，它会返回转义字符串，留给应用自己决定下一步的处理。</p>
+<h2 id="JSON-stringify-的改造"><a href="#JSON-stringify-的改造" class="headerlink" title="JSON.stringify()的改造"></a><code>JSON.stringify()</code>的改造</h2><p>为了防止返回不符合<code>UTF-8</code>标准的编码，<code>JSON.stringify()</code>做了改造 ——如果遇到<code>0xD800</code>到<code>0xDFFF</code>之间的单个码点，或者不存在的配对形式，它会返回转义字符串，留给应用自己决定下一步的处理。</p>
 <pre><code class="javascript">JSON.stringify(&#39;\u{D834}&#39;) // &quot;&quot;\\uD834&quot;&quot;
 JSON.stringify(&#39;\uDF06\uD834&#39;) // &quot;&quot;\\udf06\\ud834&quot;&quot;</code></pre>
-<h3 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h3><p>传统的 JavaScript 语言，输出模板通常是这样写的（下面使用了 jQuery 的方法）。</p>
+<h3 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h3><p>传统的 JavaScript 语言，输出模板通常是这样写的（下面使用了 <code>jQuery</code> 的方法）。</p>
 <pre><code class="javascript">$(&#39;#result&#39;).append(
   &#39;There are &lt;b&gt;&#39; + basket.count + &#39;&lt;/b&gt; &#39; +
   &#39;items in your basket, &#39; +
@@ -551,7 +553,7 @@ let name = &quot;Bob&quot;, time = &quot;today&quot;;
 <li>如果在模板字符串中需要使用反引号，则前面要用反斜杠转义。</li>
 <li>模板字符串中嵌入变量，需要将变量名写在${}之中。</li>
 <li>大括号内部可以放入任意的 JavaScript 表达式，可以进行运算，以及引用对象属性。</li>
-<li>如果大括号中的值不是字符串，将按照一般的规则转为字符串。比如，大括号中是一个对象，将默认调用对象的toString方法。<pre><code class="js">let greeting = `\`Yo\` World!`;</code></pre>
+<li>如果大括号中的值不是字符串，将按照一般的规则转为字符串。比如，大括号中是一个对象，将默认调用对象的<code>toString</code>方法。<pre><code class="js">let greeting = `\`Yo\` World!`;</code></pre>
 </li>
 </ol>
 </blockquote>
@@ -599,35 +601,36 @@ tag`Hello ${ a + b } world ${ a * b}`;
 // &quot;欢迎访问xxx，您是第xxxx位访问者！&quot;</code></pre>
 <p>“标签模板”的一个重要应用，就是过滤 HTML 字符串，防止用户输入恶意内容。<br>除此之外，你甚至可以使用标签模板，在 JavaScript 语言之中嵌入其他语言。</p>
 </blockquote>
-<h2 id="字符串的新增方法"><a href="#字符串的新增方法" class="headerlink" title="字符串的新增方法"></a>字符串的新增方法</h2><h3 id="String-fromCodePoint"><a href="#String-fromCodePoint" class="headerlink" title="String.fromCodePoint()"></a>String.fromCodePoint()</h3><p>ES5 提供<code>String.fromCharCode()</code>方法，用于从 Unicode 码点返回对应字符，但是这个方法不能识别码点大于<code>0xFFFF</code>的字符。但是我们经常会用到这些超出范围的字符，那么这时候就很有必要引入这样的一种方法了。<br>ES6 提供了<code>String.fromCodePoint()</code>方法，可以识别大于<code>0xFFFF</code>的字符，弥补了<code>String.fromCharCode()</code>方法的不足。在作用上，正好与下面的<code>codePointAt()</code>方法相反.</p>
+<h2 id="字符串的新增方法"><a href="#字符串的新增方法" class="headerlink" title="字符串的新增方法"></a>字符串的新增方法</h2><h3 id="String-fromCodePoint"><a href="#String-fromCodePoint" class="headerlink" title="String.fromCodePoint()"></a><code>String.fromCodePoint()</code></h3><p><code>ES5</code> 提供<code>String.fromCharCode()</code>方法，用于从 Unicode 码点返回对应字符，但是这个方法不能识别码点大于<code>0xFFFF</code>的字符。但是我们经常会用到这些超出范围的字符，那么这时候就很有必要引入这样的一种方法了。<br><code>ES6</code> 提供了<code>String.fromCodePoint()</code>方法，可以识别大于<code>0xFFFF</code>的字符，弥补了<code>String.fromCharCode()</code>方法的不足。在作用上，正好与下面的<code>codePointAt()</code>方法相反.</p>
 <pre><code class="js">String.fromCodePoint(0x20BB7)
 // &quot;𠮷&quot;
 String.fromCodePoint(0x78, 0x1f680, 0x79) === &#39;x\uD83D\uDE80y&#39;
 // true</code></pre>
 <p>上面代码中，如果<code>String.fromCodePoint()</code>方法有多个参数，则它们会被合并成<strong>一个字符串</strong>返回。</p>
-<h3 id="codePointAt"><a href="#codePointAt" class="headerlink" title="codePointAt()"></a>codePointAt()</h3><p>JavaScript 内部，字符以 UTF-16 的格式储存，每个字符固定为2个字节。</p>
+<h3 id="codePointAt"><a href="#codePointAt" class="headerlink" title="codePointAt()"></a><code>codePointAt()</code></h3><p>JavaScript 内部，字符以 <code>UTF-16</code> 的格式储存，每个字符固定为2个字节。</p>
 <blockquote>
-<p><em>对于那些需要4个字节储存的字符（Unicode 码点大于0xFFFF的字符），JavaScript 会认为它们是两个字符。</em></p>
+<p><em>对于那些需要4个字节储存的字符（Unicode 码点大于<code>0xFFFF</code>的字符），JavaScript 会认为它们是两个字符。</em></p>
 <pre><code class="js">var s = &quot;𠮷&quot;;</code></pre>
 </blockquote>
 <p>s.length // 2<br>s.charAt(0) // ‘’<br>s.charAt(1) // ‘’<br>s.charCodeAt(0) // 55362<br>s.charCodeAt(1) // 57271</p>
-<pre><code>上面代码中，汉字“𠮷”（注意，这个字不是“吉祥”的“吉”）的码点是0x20BB7，UTF-16 编码为0xD842 0xDFB7（十进制为55362 57271），需要4个字节储存。对于这种4个字节的字符，JavaScript 不能正确处理，字符串长度会误判为2，而且**charAt()方法无法读取整个字符**，`charCodeAt()`方法只能分别返回**前两个字节**和**后两个字节**的值。
+<pre><code>上面代码中，汉字“𠮷”（注意，这个字不是“吉祥”的“吉”）的码点是`0x20BB7`，`UTF-16` 编码为`0xD842`` 0xDFB7`（十进制为55362 57271），需要4个字节储存。对于这种4个字节的字符，JavaScript 不能正确处理，字符串长度会误判为2，而且**`charAt()`方法无法读取整个字符**，`charCodeAt()`方法只能分别返回**前两个字节**和**后两个字节**的值。
 
-ES6 提供了`codePointAt()`方法，能够正确处理 4 个字节储存的字符，返回一个字符的码点。
+`ES6` 提供了`codePointAt()`方法，能够正确处理 4 个字节储存的字符，返回一个字符的码点。
+
 ~~~js
 let s = &#39;𠮷a&#39;;
 s.codePointAt(0) // 134071
 s.codePointAt(1) // 57271
-s.codePointAt(2) // 97</code></pre><p><code>codePointAt()</code>方法的参数，是字符在字符串中的位置（从 0 开始）。上面代码中，JavaScript 将“𠮷a”视为三个字符，<code>codePointAt()</code>方法在<strong>第一个字符</strong>上，正确地识别了“𠮷”，返回了它的十进制码点 134071（即十六进制的20BB7）。在<strong>第二个字符</strong>（即“𠮷”的后两个字节）和<strong>第三个字符</strong>“a”上，<code>odePointAt()</code>法的结果与<code>charCodeAt()</code>方法相同。</p>
-<p>总之，codePointAt()方法会正确返回 32 位的 UTF-16 字符的码点。对于那些两个字节储存的常规字符，它的返回结果与charCodeAt()方法相同。</p>
-<h3 id="String-raw"><a href="#String-raw" class="headerlink" title="String.raw()"></a>String.raw()</h3><p>ES6 还为原生的 String 对象，提供了一个raw()方法。该方法返回一个斜杠都被转义（即斜杠前面再加一个斜杠）的字符串，往往用于模板字符串的处理方法。</p>
+s.codePointAt(2) // 97</code></pre><p><code>codePointAt()</code>方法的参数，是字符在字符串中的位置（从 0 开始）。上面代码中，JavaScript 将“𠮷a”视为三个字符，<code>codePointAt()</code>方法在<strong>第一个字符</strong>上，正确地识别了“𠮷”，返回了它的十进制码点 134071（即十六进制的<code>20BB7</code>）。在<strong>第二个字符</strong>（即“𠮷”的后两个字节）和<strong>第三个字符</strong>“a”上，<code>odePointAt()</code>法的结果与<code>charCodeAt()</code>方法相同。</p>
+<p>总之，<code>codePointAt()</code>方法会正确返回 32 位的 <code>UTF-16</code> 字符的码点。对于那些两个字节储存的常规字符，它的返回结果与<code>charCodeAt()</code>方法相同。</p>
+<h3 id="String-raw"><a href="#String-raw" class="headerlink" title="String.raw()"></a><code>String.raw()</code></h3><p><code>ES6</code> 还为原生的 String 对象，提供了一个raw()方法。该方法返回一个斜杠都被转义（即斜杠前面再加一个斜杠）的字符串，往往用于模板字符串的处理方法。</p>
 <pre><code class="js">String.raw`Hi\n${2+3}!`;
 // 返回 &quot;Hi\\n5!&quot;
 
 String.raw`Hi\u000A!`;
 // 返回 &quot;Hi\\u000A!&quot;</code></pre>
 <blockquote>
-<p>如果原字符串的斜杠已经转义，那么String.raw()会进行再次转义。</p>
+<p>如果原字符串的斜杠已经转义，那么<code>String.raw()</code>会进行再次转义。</p>
 </blockquote>
 <p><code>String.raw()</code>方法可以作为处理模板字符串的基本方法，它会将所有变量替换，而且对斜杠进行转义，方便下一步作为字符串来使用。</p>
 <pre><code class="js">String.raw({ raw: &#39;test&#39; }, 0, 1, 2);
@@ -635,7 +638,7 @@ String.raw`Hi\u000A!`;
 
 // 等同于
 String.raw({ raw: [&#39;t&#39;,&#39;e&#39;,&#39;s&#39;,&#39;t&#39;] }, 0, 1, 2);</code></pre>
-<h3 id="normalize"><a href="#normalize" class="headerlink" title="normalize()"></a>normalize()</h3><p>ES6 提供字符串实例的<code>normalize()</code>方法，用来将字符的不同表示方法统一为同样的形式，这称为 Unicode 正规化。</p>
+<h3 id="normalize"><a href="#normalize" class="headerlink" title="normalize()"></a>normalize()</h3><p><code>ES6</code> 提供字符串实例的<code>normalize()</code>方法，用来将字符的不同表示方法统一为同样的形式，这称为 Unicode 正规化。</p>
 <pre><code class="js">&#39;\u01D1&#39;.normalize() === &#39;\u004F\u030C&#39;.normalize()
 // true</code></pre>
 <p><code>normalize()</code>方法可以接受一个参数来指定<code>normalize()</code>的方式，参数的四个可选值如下。</p>
@@ -645,14 +648,14 @@ String.raw({ raw: [&#39;t&#39;,&#39;e&#39;,&#39;s&#39;,&#39;t&#39;] }, 0, 1, 2);
 <li><code>NFKC</code>，表示“兼容等价合成”（<em>Normalization Form Compatibility Composition</em>），返回合成字符。所谓“兼容等价”指的是语义上存在等价，但视觉上不等价，比如“囍”和“喜喜”。（这只是用来举例，normalize方法不能识别中文。）</li>
 <li><code>NFKD</code>，表示“兼容等价分解”（<em>Normalization Form Compatibility Decomposition</em>），即在兼容等价的前提下，返回合成字符分解的多个简单字符。<pre><code class="js">&#39;\u004F\u030C&#39;.normalize(&#39;NFC&#39;).length // 1
 &#39;\u004F\u030C&#39;.normalize(&#39;NFD&#39;).length // 2</code></pre>
-上面代码表示，NFC参数返回字符的合成形式，NFD参数返回字符的分解形式。</li>
+上面代码表示，NFC参数返回字符的合成形式，<code>NFD</code>参数返回字符的分解形式。</li>
 </ul>
 <p>不过，<code>normalize()</code>方法目前不能识别三个或三个以上字符的合成。这种情况下，还是只能使用正则表达式，通过 Unicode 编号区间判断。</p>
-<h3 id="includes-startsWith-endsWith"><a href="#includes-startsWith-endsWith" class="headerlink" title="includes() ,startsWith(), endsWith()"></a>includes() ,startsWith(), endsWith()</h3><p>传统上，JavaScript 只有indexOf方法，可以用来确定一个字符串是否包含在另一个字符串中。ES6 又提供了三种新方法。</p>
+<h3 id="includes-startsWith-endsWith"><a href="#includes-startsWith-endsWith" class="headerlink" title="includes(),startsWith(), endsWith()"></a><code>includes()</code>,<code>startsWith()</code>, <code>endsWith()</code></h3><p>传统上，JavaScript 只有<code>indexOf</code>方法，可以用来确定一个字符串是否包含在另一个字符串中。<code>ES6</code> 又提供了三种新方法。</p>
 <ul>
 <li>includes()：返回布尔值，表示是否找到了参数字符串。</li>
-<li>startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。</li>
-<li>endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。<pre><code class="js">let s = &#39;Hello world!&#39;;
+<li><code>startsWith()</code>：返回布尔值，表示参数字符串是否在原字符串的头部。</li>
+<li><code>endsWith()</code>：返回布尔值，表示参数字符串是否在原字符串的尾部。<pre><code class="js">let s = &#39;Hello world!&#39;;
 </code></pre>
 </li>
 </ul>
@@ -662,14 +665,14 @@ String.raw({ raw: [&#39;t&#39;,&#39;e&#39;,&#39;s&#39;,&#39;t&#39;] }, 0, 1, 2);
 ~~~js
 &#39;x&#39;.repeat(3) // &quot;xxx&quot;
 &#39;hello&#39;.repeat(2) // &quot;hellohello&quot;
-&#39;na&#39;.repeat(0) // &quot;&quot;</code></pre><h3 id="padStart-padEnd"><a href="#padStart-padEnd" class="headerlink" title="padStart() , padEnd()"></a>padStart() , padEnd()</h3><p>ES2017 引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。<code>padStart()</code>用于头部补全，<code>padEnd()</code>用于尾部补全。</p>
+&#39;na&#39;.repeat(0) // &quot;&quot;</code></pre><h3 id="padStart-padEnd"><a href="#padStart-padEnd" class="headerlink" title="padStart() ,padEnd()"></a><code>padStart()</code> ,<code>padEnd()</code></h3><p><code>ES2017</code>引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。<code>padStart()</code>用于头部补全，<code>padEnd()</code>用于尾部补全。</p>
 <pre><code class="js">&#39;x&#39;.padStart(5, &#39;ab&#39;) // &#39;ababx&#39;
 &#39;x&#39;.padStart(4, &#39;ab&#39;) // &#39;abax&#39;
 
 &#39;x&#39;.padEnd(5, &#39;ab&#39;) // &#39;xabab&#39;
 &#39;x&#39;.padEnd(4, &#39;ab&#39;) // &#39;xaba&#39;</code></pre>
 <p>上面代码中，<code>padStart()</code>和<code>padEnd()</code>一共接受两个参数，第一个参数是字符串补全生效的最大长度，第二个参数是用来补全的字符串。</p>
-<h3 id="trimStart-trimEnd"><a href="#trimStart-trimEnd" class="headerlink" title="trimStart() , trimEnd()"></a>trimStart() , trimEnd()</h3><p>ES2019 对字符串实例新增了<code>trimStart()</code>和<code>trimEnd()</code>这两个方法。它们的行为与<code>trim()</code>一致，<code>trimStart()</code>消除字符串头部的空格，<code>trimEnd()</code>消除尾部的空格。它们返回的都是新字符串，不会修改原始字符串。</p>
+<h3 id="trimStart-trimEnd"><a href="#trimStart-trimEnd" class="headerlink" title="trimStart() , trimEnd()"></a><code>trimStart()</code> , <code>trimEnd()</code></h3><p><code>ES2019</code> 对字符串实例新增了<code>trimStart()</code>和<code>trimEnd()</code>这两个方法。它们的行为与<code>trim()</code>一致，<code>trimStart()</code>消除字符串头部的空格，<code>trimEnd()</code>消除尾部的空格。它们返回的都是新字符串，不会修改原始字符串。</p>
 <pre><code class="js">const s = &#39;  abc  &#39;;
 
 s.trim() // &quot;abc&quot;
@@ -702,7 +705,9 @@ s.trimEnd() // &quot;  abc&quot;
       
         <div class="post-tags">
           
-            <a href="/tags/ES6-字符串/" rel="tag"><i class="fa fa-tag"></i> -ES6 -字符串</a>
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
+          
+            <a href="/tags/字符与字符串/" rel="tag"><i class="fa fa-tag"></i> 字符与字符串</a>
           
         </div>
       
@@ -817,6 +822,8 @@ s.trimEnd() // &quot;  abc&quot;
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -848,7 +855,25 @@ s.trimEnd() // &quot;  abc&quot;
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -923,7 +948,7 @@ s.trimEnd() // &quot;  abc&quot;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串的拓展与新增方法"><span class="nav-number">1.</span> <span class="nav-text">字符串的拓展与新增方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串拓展"><span class="nav-number">1.1.</span> <span class="nav-text">字符串拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串的表示法"><span class="nav-number">1.1.1.</span> <span class="nav-text">字符串的表示法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串的遍历器接口"><span class="nav-number">1.1.2.</span> <span class="nav-text">字符串的遍历器接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接输入字符"><span class="nav-number">1.1.3.</span> <span class="nav-text">直接输入字符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON-stringify-的改造"><span class="nav-number">1.2.</span> <span class="nav-text">JSON.stringify()的改造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板字符串"><span class="nav-number">1.2.1.</span> <span class="nav-text">模板字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例：-模板编译"><span class="nav-number">1.2.2.</span> <span class="nav-text">实例： 模板编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签模板"><span class="nav-number">1.2.3.</span> <span class="nav-text">标签模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的新增方法"><span class="nav-number">1.3.</span> <span class="nav-text">字符串的新增方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String-fromCodePoint"><span class="nav-number">1.3.1.</span> <span class="nav-text">String.fromCodePoint()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#codePointAt"><span class="nav-number">1.3.2.</span> <span class="nav-text">codePointAt()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-raw"><span class="nav-number">1.3.3.</span> <span class="nav-text">String.raw()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#normalize"><span class="nav-number">1.3.4.</span> <span class="nav-text">normalize()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#includes-startsWith-endsWith"><span class="nav-number">1.3.5.</span> <span class="nav-text">includes() ,startsWith(), endsWith()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#padStart-padEnd"><span class="nav-number">1.3.6.</span> <span class="nav-text">padStart() , padEnd()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trimStart-trimEnd"><span class="nav-number">1.3.7.</span> <span class="nav-text">trimStart() , trimEnd()</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串的拓展与新增方法"><span class="nav-number">1.</span> <span class="nav-text">字符串的拓展与新增方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串拓展"><span class="nav-number">1.1.</span> <span class="nav-text">字符串拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串的表示法"><span class="nav-number">1.1.1.</span> <span class="nav-text">字符串的表示法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串的遍历器接口"><span class="nav-number">1.1.2.</span> <span class="nav-text">字符串的遍历器接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接输入字符"><span class="nav-number">1.1.3.</span> <span class="nav-text">直接输入字符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON-stringify-的改造"><span class="nav-number">1.2.</span> <span class="nav-text">JSON.stringify()的改造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板字符串"><span class="nav-number">1.2.1.</span> <span class="nav-text">模板字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例：-模板编译"><span class="nav-number">1.2.2.</span> <span class="nav-text">实例： 模板编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签模板"><span class="nav-number">1.2.3.</span> <span class="nav-text">标签模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的新增方法"><span class="nav-number">1.3.</span> <span class="nav-text">字符串的新增方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String-fromCodePoint"><span class="nav-number">1.3.1.</span> <span class="nav-text">String.fromCodePoint()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#codePointAt"><span class="nav-number">1.3.2.</span> <span class="nav-text">codePointAt()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-raw"><span class="nav-number">1.3.3.</span> <span class="nav-text">String.raw()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#normalize"><span class="nav-number">1.3.4.</span> <span class="nav-text">normalize()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#includes-startsWith-endsWith"><span class="nav-number">1.3.5.</span> <span class="nav-text">includes(),startsWith(), endsWith()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#padStart-padEnd"><span class="nav-number">1.3.6.</span> <span class="nav-text">padStart() ,padEnd()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trimStart-trimEnd"><span class="nav-number">1.3.7.</span> <span class="nav-text">trimStart() , trimEnd()</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
