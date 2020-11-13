@@ -112,21 +112,28 @@
     }
 </style>
 
-  <meta name="description" content="面试时候我们经常可能会被问到网络相关的知识，我们来看看TCP协议和UDP协议到底是怎么工作的吧!">
-<meta name="keywords" content="计算机网络">
+  <meta name="description" content="事件什么是事件？众所周知，我们在写页面时候有时会用到一些交互，而交互通常是在JavaScript与HTML之间进行的，进一步说，他们两个的交互就是通过事件进行的。">
+<meta name="keywords" content="DOM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TCP和UDP">
-<meta property="og:url" content="https://fyttto.github.io/2020/10/12/TCP和UDP/index.html">
+<meta property="og:title" content=" 事件">
+<meta property="og:url" content="https://fyttto.github.io/2019/07/29/JavaScript事件/index.html">
 <meta property="og:site_name" content="yufeif">
-<meta property="og:description" content="面试时候我们经常可能会被问到网络相关的知识，我们来看看TCP协议和UDP协议到底是怎么工作的吧!">
+<meta property="og:description" content="事件什么是事件？众所周知，我们在写页面时候有时会用到一些交互，而交互通常是在JavaScript与HTML之间进行的，进一步说，他们两个的交互就是通过事件进行的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://images2017.cnblogs.com/blog/985821/201708/985821-20170802101806802-1497343688.png">
-<meta property="og:image" content="https://images2017.cnblogs.com/blog/985821/201708/985821-20170802101823505-1177747613.png">
-<meta property="og:updated_time" content="2020-11-13T01:50:05.317Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190520193435194.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190520193705147.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190520194151316.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190523215441813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_000000,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190528185406318.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190528185606236.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190528192929860.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190528193343170.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190601155758491.png">
+<meta property="og:updated_time" content="2020-11-13T01:54:54.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TCP和UDP">
-<meta name="twitter:description" content="面试时候我们经常可能会被问到网络相关的知识，我们来看看TCP协议和UDP协议到底是怎么工作的吧!">
-<meta name="twitter:image" content="https://images2017.cnblogs.com/blog/985821/201708/985821-20170802101806802-1497343688.png">
+<meta name="twitter:title" content=" 事件">
+<meta name="twitter:description" content="事件什么是事件？众所周知，我们在写页面时候有时会用到一些交互，而交互通常是在JavaScript与HTML之间进行的，进一步说，他们两个的交互就是通过事件进行的。">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190520193435194.png">
 
 
 
@@ -134,7 +141,7 @@
 
   
   
-  <link rel="canonical" href="https://fyttto.github.io/2020/10/12/TCP和UDP/">
+  <link rel="canonical" href="https://fyttto.github.io/2019/07/29/JavaScript事件/">
 
 
 
@@ -144,7 +151,7 @@
   };
 </script>
 
-  <title>TCP和UDP | yufeif</title>
+  <title> 事件 | yufeif</title>
   
 
 
@@ -361,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2020/10/12/TCP和UDP/">
+    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2019/07/29/JavaScript事件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengyufei">
@@ -378,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TCP和UDP
+          <h1 class="post-title" itemprop="name headline"> 事件
 
               
             
@@ -404,7 +411,7 @@
                 
               
 
-              <time title="创建时间：2020-10-12 13:51:05" itemprop="dateCreated datePublished" datetime="2020-10-12T13:51:05+08:00">2020-10-12</time>
+              <time title="创建时间：2019-07-29 15:20:33" itemprop="dateCreated datePublished" datetime="2019-07-29T15:20:33+08:00">2019-07-29</time>
             
 
             
@@ -421,7 +428,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-11-13 09:50:05" itemprop="dateModified" datetime="2020-11-13T09:50:05+08:00">2020-11-13</time>
+                <time title="修改时间：2020-11-13 09:54:54" itemprop="dateModified" datetime="2020-11-13T09:54:54+08:00">2020-11-13</time>
               
             
           </span>
@@ -438,7 +445,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机网络/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
 
                 
                 
@@ -473,70 +480,85 @@
       
 
       
-        <p>面试时候我们经常可能会被问到网络相关的知识，我们来看看TCP协议和UDP协议到底是怎么工作的吧!</p>
+        <h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><h2 id="什么是事件？"><a href="#什么是事件？" class="headerlink" title="什么是事件？"></a>什么是事件？</h2><p>众所周知，我们在写页面时候有时会用到一些<strong>交互</strong>，而交互通常是在<em>JavaScript</em>与<em>HTML</em>之间进行的，进一步说，他们两个的交互就是通过<strong>事件</strong>进行的。</p>
 <a id="more"></a>
-<h1 id="TCP协议和UDP协议"><a href="#TCP协议和UDP协议" class="headerlink" title="TCP协议和UDP协议"></a>TCP协议和UDP协议</h1><h2 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h2><p>传输控制协议（TCP，<em>Transmission Control Protocol</em>）是一种<strong>面向连接的</strong>、<strong>可靠的</strong>、<strong>基于字节流</strong>的传输层通信协议。</p>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
-<li>在一个TCP连接中，仅有<strong>两方</strong>进行彼此通信。</li>
-<li>TCP使用<strong>校验</strong>，<strong>确认</strong>和<strong>重传</strong>机制来保证可靠传输</li>
-<li>TCP使用数据分节进行排序，并使用累积确保数据的顺序不变和非重复</li>
-<li>使用滑动窗口机制实现流量控制，通过动态改变窗口的大小来进行拥塞控制</li>
-</ul>
+<p><img src="https://img-blog.csdnimg.cn/20190520193435194.png" alt="在这里插入图片描述"></p>
+<p>那么，说了半天事件到底是什么。<br>答案即将揭晓。。。<br><img src="https://img-blog.csdnimg.cn/20190520193705147.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190520194151316.png" alt="在这里插入图片描述"><br>事件就是，文档或者浏览器窗口发生的一些<strong>特定</strong>的交互瞬间。</p>
+<p> <strong>是不是有点失望，没事，正常，干货即将到达战场，请做好瞎混的准备😂</strong></p>
+<hr>
+<h2 id="一-事件流"><a href="#一-事件流" class="headerlink" title="(一)事件流"></a>(一)事件流</h2><p><strong>事件流</strong>描述的是从<strong>页面接受事件</strong>的顺序。<br>但是有两个团队提出了两个事件流的概念，分别是IE和Netscape开发团队。<br>但是两者有什么区别呢？<br>这么说吧，<br>这两个几乎完全不一样。</p>
+<h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><p>事件冒泡（event bubbling ），是事件开始时由最具体的元素（文档嵌套层次最深的那个节点）接受，然后逐级向上传播到较为不具体的节点。<br><strong>比如有这样一段代码</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;myDiv&quot;&gt;Click me!&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20190523215441813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_16,color_000000,t_70" alt="在这里插入图片描述"><br>那么Click事件的传播顺序是：<br>（1）<code>&lt;div&gt;</code><br>（2）<code>&lt;body&gt;</code><br>（3）<code>&lt;html&gt;</code><br>（4）<code>document</code></p>
+<p>就是说在<code>&lt;div&gt;</code>元素上发生了Click事件,那么这个元素就会沿DOM树向上传播，在每一级节点上都会发生，直到传播到document对象上。</p>
 <blockquote>
-<p> TCP并不能保证数据一定会被对方接收到，TCP能保证的是能准确地将数据送到客户端，或者是向客户端报告故障。</p>
+<p><strong>现代浏览器都支持事件冒泡，除了IE5 及以前的更早版本的浏览器</strong></p>
 </blockquote>
-<h3 id="三次握手和四次挥手"><a href="#三次握手和四次挥手" class="headerlink" title="三次握手和四次挥手"></a>三次握手和四次挥手</h3><p>三次握手和四次挥手分别是发生在<strong>建立TCP连接时</strong>和<strong>拆除TCP连接时</strong>。</p>
-<h4 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h4><p>三次握手的目的是连接服务器指定端口，建立TCP连接，并同步连接双方的序列号和确认号，交换TCP窗口大小信息。</p>
-<p>在<code>socket</code>编程中，客户端执行<code>connet()</code>时，将会触发三次握手。</p>
-<p><u>三次握手的示意图如下：</u></p>
-<p><img src="https://images2017.cnblogs.com/blog/985821/201708/985821-20170802101806802-1497343688.png" alt="img"></p>
-<p>客户端发送连接请求报文，服务端收到连接请求报文回复<code>ACK</code>确认报文，并且为此次连接分配资源。客户端收到<code>ACK</code>报文后同样也向服务端发<code>ACK</code>报文，并分配资源，这就是建立TCP连接的过程。</p>
-<ul>
-<li>最初的客户端和服务端的TCP进程都处于<code>CLOSE</code>关闭状态，A主动打开连接，B就被动打开连接 ，创建传输控制块TCB，准备接收客户进程的连接需求，然后服务器就处于<code>LISTEN</code>（收听） 状态。</li>
-</ul>
+<h3 id="事件捕获"><a href="#事件捕获" class="headerlink" title="事件捕获"></a>事件捕获</h3><p>事件捕获的思想是不太具体的节点应该比具体的节点更早接收到事件，所以它其实就是事件冒泡的相反例子。<br><strong>唯一作用</strong>：可以在事件达到预期效果之前捕获事件。</p>
 <blockquote>
-<p><strong>TCB</strong>（传输控制块，<em>Transmission Control Block</em>），存储每一个连接中的重要信息，如TCP连接表，到发送和接收缓存的指针，到重传队列的指针，当前的发送和接收序号。</p>
+<p>事件捕获仅仅有事件捕获流模型支持但是从IE9开始各大主流浏览器都支持该种事件流模型。</p>
+<blockquote>
+<p>由于其兼容性差，比较常用的还是事件冒泡。</p>
 </blockquote>
-<ul>
-<li><strong>第一次握手</strong>：A的TCP客户进程首先创建传输控制块TCB，然后向B发出连接请求报文段，（<strong>首部的同部位SYN=1，初始序号seq=x )</strong>，(SYN=1的报文段不能携带数据，但要消耗掉一个序号)，此时TCP客户进程进入SYN-SENT（同步已发送）状态。</li>
-<li><strong>第二次握手：</strong>B收到连接请求报文段后，如同意建立连接，则向A发送确认，在确认报文段中（<strong>SYN=1，ACK=1，确认号ack=x+1，初始序号seq=y</strong>），测试TCP服务器进程进入SYN-RCVD（同步收到）状态；</li>
-<li><strong>第三次握手</strong>：TCP客户进程收到B的确认后，要向B给出确认报文段（<strong>ACK=1，确认号ack=y+1，序号seq=x+1</strong>）（初始为seq=x，第二个报文段所以要+1），ACK报文段可以携带数据，不携带数据则不消耗序号。TCP连接已经建立，A进入<code>ESTABLISHED</code>（已建立连接）。</li>
-<li>当B收到A的确认后，也进入<code>ESTABLISHED</code>状态。</li>
-</ul>
-<p>起初A和B都处于<strong>CLOSED状态</strong>——B创建TCB，处于<strong>LISTEN状态</strong>，等待A请求——A创建TCB，发送连接请求（SYN=1，seq=x），进入<strong>SYN-SENT状态</strong>——B收到连接请求，向A发送确认（SYN=ACK=1，确认号ack=x+1，初始序号seq=y），进入<strong>SYN-RCVD状态</strong>——A收到B的确认后，给B发出确认（ACK=1，ack=y+1，seq=x+1），A进入<strong>ESTABLISHED状态</strong>——B收到A的确认后，进入ESTABLISHED状态。</p>
-<h4 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h4><p>假设Client端发起中断连接请求，也就是发送FIN报文。Server端接到FIN报文后，意思是说”我Client端没有数据要发给你了”，但是如果你还有数据没有发送完成，则不必急着关闭Socket，可以继续发送数据。所以你先发送ACK，”告诉Client端，你的请求我收到了，但是我还没准备好，请继续你等我的消息”。这个时候Client端就进入FIN_WAIT状态，继续等待Server端的FIN报文。当Server端确定数据已发送完成，则向Client端发送FIN报文，”告诉Client端，好了，我这边数据发完了，准备好关闭连接了”。Client端收到FIN报文后，”就知道可以关闭连接了，但是他还是不相信网络，怕Server端不知道要关闭，所以发送ACK后进入TIME_WAIT状态，如果Server端没有收到ACK则可以重传。“，Server端收到ACK后，”就知道可以断开连接了”。Client端等待了2MSL后依然没有收到回复，则证明Server端已正常关闭，那好，我Client端也可以关闭连接了。Ok，TCP连接就这样关闭了。</p>
-<p><img src="https://images2017.cnblogs.com/blog/985821/201708/985821-20170802101823505-1177747613.png" alt="img"></p>
-<p> 数据传输结束后，通信的双方都可释放连接，A和B都处于ESTABLISHED状态。（<strong>A、B连接建立状态ESTABLISHED</strong>——<strong>A终止等待1状态FIN-WAIT-1</strong>——<strong>B关闭等待状态CLOSE-WAIT</strong>——<strong>A终止等待2状态FIN-WAIT-2</strong>——<strong>B最后确认状态LAST-ACK</strong>——<strong>A时间等待状态TIME-WAIT</strong>——<strong>B、A关闭状态CLOSED</strong>）</p>
-<p>四次挥手的过程如下：</p>
-<ul>
-<li><p>第一次挥手：客户端的应用进程向其TCP发出连接释放报文段（<strong>FIN=1，序号seq=u</strong>），并停止再发送数据，主动关闭TCP连接，进入FIN-WAIT-1（终止等待1）状态，等待B的确认。</p>
-</li>
-<li><p>第二次挥手：B收到连接释放报文段后立即发出确认报文段，（<strong>ACK=1，确认号ack=u+1,序号seq=v</strong>），B进入CLOSE-WAIT（关闭等待）状态，此时的TCP处于半关闭状态，A到B的连接释放。</p>
-</li>
-<li><p>第三次挥手：B没有要向A发出的数据，B发出连接释放报文段（<strong>FIN=1，ACK=1，序号seq=w，确认号ack=u+1），</strong>B进入LAST-ACK（最后确认）状态，等待A的确认。</p>
-</li>
-<li><p>第四次挥手：A收到B的连接释放报文段后，对此发出确认报文段（<strong>ACK=1，seq=u+1，ack=w+1</strong>），A进入TIME-WAIT（时间等待）状态。此时TCP未释放掉，需要经过时间等待计时器设置的时间2MSL后，A才进入CLOSED状态</p>
-</li>
-</ul>
-<p>起初A和B处于<strong>ESTABLISHED状态</strong>——A发出连接释放报文段并处于<strong>FIN-WAIT-1状态</strong>——B发出确认报文段且进入<strong>CLOSE-WAIT状态</strong>——A收到确认后，进入<strong>FIN-WAIT-2状态</strong>，等待B的连接释放报文段——B没有要向A发出的数据，B发出连接释放报文段且进入<strong>LAST-ACK状态</strong>——A发出确认报文段且进入<strong>TIME-WAIT状态</strong>——B收到确认报文段后进入<strong>CLOSED状态</strong>——A经过等待计时器时间2MSL后，进入<strong>CLOSED状态</strong>。</p>
-<h2 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h2><p>User Data Protocol，用户数据报协议</p>
-<ol>
-<li>DP是一个非连接的协议，传输数据之前源端和终端不建立连接， 当它想传送时就简单地去抓取来自应用程序的数据，并尽可能快地把它扔到网络上。 在发送端，UDP传送数据的速度仅仅是受应用程序生成数据的速度、 计算机的能力和传输带宽的限制； 在接收端，UDP把每个消息段放在队列中，应用程序每次从队列中读一个消息段。</li>
-<li>由于传输数据不建立连接，因此也就不需要维护连接状态，包括收发状态等， 因此一台服务机可同时向多个客户机传输相同的消息。</li>
-<li>UDP信息包的标题很短，只有8个字节，相对于TCP的20个字节信息包的额外开销很小。</li>
-<li>吞吐量不受拥挤控制算法的调节，只受应用软件生成数据的速率、传输带宽、 源端和终端主机性能的限制。</li>
-<li>UDP使用尽最大努力交付，即不保证可靠交付， 因此主机不需要维持复杂的链接状态表（这里面有许多参数）。</li>
-<li>UDP是面向报文的。发送方的UDP对应用程序交下来的报文， 在添加首部后就向下交付给IP层。既不拆分，也不合并，而是保留这些报文的边界， 因此，应用程序需要选择合适的报文大小。</li>
-</ol>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>1、基于连接与无连接；</p>
-<p>2、对系统资源的要求（TCP较多，UDP少）；</p>
-<p>3、UDP程序结构较简单；</p>
-<p>4、流模式与数据报模式 ；</p>
-<p>5、TCP保证数据正确性，UDP可能丢包；</p>
-<p>6、TCP保证数据顺序，UDP不保证。</p>
-<h3 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h3><p>我们经常使用“ping”命令来测试两台主机之间TCP/IP通信是否正常， 其实“ping”命令的原理就是向对方主机发送UDP数据包，然后对方主机确认收到数据包， 如果数据包是否到达的消息及时反馈回来，那么网络就是通的。</p>
-<p><strong>ping命令</strong>是用来探测主机到主机之间是否可通信，如果不能<strong>ping</strong>到某台主机，表明不能和这台主机建立连接。<strong>ping命令</strong>是使用 IP 和网络控制信息协议 (ICMP)，因而没有涉及到任何传输协议(UDP/TCP) 和应用程序。它发送icmp回送请求消息给目的主机。</p>
-<p>ICMP协议规定：目的主机必须返回ICMP回送应答消息给源主机。如果源主机在一定时间内收到应答，则认为主机可达。</p>
+</blockquote>
+<h3 id="DOM事件流"><a href="#DOM事件流" class="headerlink" title="DOM事件流"></a>DOM事件流</h3><p>“<em>DOM2级事件</em>”规定的事件流有三个阶段：<strong>事件捕获阶段</strong>，<strong>处于目标阶段和事件冒泡阶段</strong>。<br>1.事件捕获阶段：为捕获事件提供机会。<br>2.接收事件的过程。<br>3.事件冒泡阶段：页面对事件进行响应。</p>
+<hr>
+<h2 id="（二）事件处理程序"><a href="#（二）事件处理程序" class="headerlink" title="（二）事件处理程序"></a>（二）事件处理程序</h2><p><strong>什么是事件处理程序？</strong><br>说到这里了，我们现在肯定都知道事件是什么了吧！！！！<br>时间就是浏览器在执行某一特定交互时，产生的反应。那么，这个反应由谁来执行，这就是事件处理函数的作用了。<br><strong>事件处理函数</strong>就是<strong>响应某个事件的函数</strong>，从而达到某种效果或者是某种变化的函数，它也被叫做<strong>事件侦听器</strong>。</p>
+<h3 id="HTML事件处理程序"><a href="#HTML事件处理程序" class="headerlink" title="HTML事件处理程序"></a>HTML事件处理程序</h3><p>在我看来HTML事件处理程序就类似于我们在学习CSS时使用的内嵌式CSS，即是在HTML标签内部写JS代码。<br>来举一个🌰吧：<br>下面图片中的代码就是一个简单的HTML事件处理程序，代码在用户点击按钮之后弹出警告框，提示相关文字。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190528185406318.png" alt="在这里插入图片描述"></p>
+<p><strong>结果如下图显示:</strong><br><img src="https://img-blog.csdnimg.cn/20190528185606236.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>但是这种方法由于在HTML代码中，所以相对应的代码之间的区别还是需要注意。<br>比如一些常用的符号，”&lt;”，”&gt;”，”  “”  “（双引号），” &amp;”。等等</p>
+</blockquote>
+<p><strong>但是，并不是全然无用的。</strong><br>这个方法会封装一个函数，其中封装着元素属性值，在这个函数中还有一个局部函数变量event，也就是事件对象。通过这个函数对象，你可以直接访问到其他元素成员。</p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;Click me!&quot; onclick=alert(&quot;this.vaule&quot;)&quot;&gt;</code></pre><p>其中的this等于事件的目标元素。（但是不一定在所有的函数中都成立）<br><img src="https://img-blog.csdnimg.cn/20190528192929860.png" alt="在这里插入图片描述"></p>
+<pre><code>&lt;input type=&quot;button&quot; value=&quot;Click me!&quot; onclick=&quot;alert(event.type)&quot;&gt;</code></pre><p><img src="https://img-blog.csdnimg.cn/20190528193343170.png" alt="在这里插入图片描述"><br>但是，当函数未加载完成时，点击交互就会出现错误，但是将函数封装就会避免这种未加载的情况，错误会被提前捕获，从而不会发生。</p>
+<blockquote>
+<p>使用这个HTML事件处理程序有一个致命的缺点就是<strong>HTML与JavaScript代码高度耦合</strong>，如果有部分出错，那么改动将会变得特别多，所以我们更常用javascript代码。</p>
+</blockquote>
+<h3 id="DOM0级事件处理程序"><a href="#DOM0级事件处理程序" class="headerlink" title="DOM0级事件处理程序"></a>DOM0级事件处理程序</h3><p>这是用JavaScript指定事件的传统方式，就是将一个<strong>函数</strong>赋值给一个<strong>事件处理程序属性</strong>。<br>每一个元素(包括window和document)都有自己的事件处理程序属性，这些属性通常是小写的。<br>例子如下：</p>
+<pre><code>var btn=document.getElementsById(&quot;myBtn&quot;);
+btn.onclick=function(){
+    alert(&quot;Click!&quot;)
+}</code></pre><p><img src="https://img-blog.csdnimg.cn/20190601155758491.png" alt="在这里插入图片描述"><br>将这种属性的值设置为一个函数，就可以指定时事件处理程序，我们在这里指定了一个onclick事件处理程序，单击按钮后会弹出警告框提示Click，</p>
+<blockquote>
+<p>使用这个方法对于每一个元素仅仅可以添加一个事件处理程序。</p>
+</blockquote>
+<p>使用的严谨格式为：<code>元素.on+type=函数(){语句}</code><br>那么如何删除这个事件处理函数呢？<br>答案是。将这个属性的值直接赋空就行了。简单吧；；</p>
+<pre><code>btn.onclick=null;</code></pre><p>将事件处理程序设置为null之后，再次单击按钮将不会有任何动作发生。</p>
+<h3 id="DOM2级事件处理程序"><a href="#DOM2级事件处理程序" class="headerlink" title="DOM2级事件处理程序"></a>DOM2级事件处理程序</h3><p>DOM2级事件中有两个方法，用于指定和删除事件处理程序：<code>addEventListener()</code>he <code>removeEventListener()</code>。<br>这两种方法比较相似，都接收三个参数：<strong>要处理的事件名</strong>、<strong>作为事件处理的函数</strong>和<strong>一个布尔值</strong>。最后的布尔值参数如果是true，表示在捕获阶段调用事件处理程序；布尔值参数如果为false,就表示在冒泡阶段调用事件处理程序。</p>
+<pre><code>var btn=document.getElementById(&quot;btn&quot;);
+btn.addEventListener(&quot;click&quot;,function(){
+    alert(this.id);
+},false);</code></pre><p>这段代码的含义是，为按钮添加一个onclick事件处理函数，并且这个事件处理函数会在冒泡阶段被触发（最后一个参数为false）。</p>
+<blockquote>
+<p>这个方法可以添加多个事件处理程序。</p>
+</blockquote>
+<p>通过<code>addEventListener()</code>添加的事件处理程序只能使用removeEventListener()来移除，但是两种方法的参数完全相同，但是通过前一种方法添加的匿名函数无法使用对应方法进行移除，即函数名必须相同。</p>
+<pre><code>    var btn=document.getElementById(&quot;btn&quot;);
+    btn.addEventListener(&quot;click&quot;,function(){
+            alert(this.id);
+        },false);
+    btn.removeEventListener(&quot;click&quot;,function(){            //没有用
+            alert(this.id);                                                    
+        },false);</code></pre><blockquote>
+<p>大部分时候，我们都会将事件处理程序添加到事件流的冒泡阶段，因为这样的兼容性强。</p>
+</blockquote>
+<h3 id="IE事件处理程序"><a href="#IE事件处理程序" class="headerlink" title="IE事件处理程序"></a>IE事件处理程序</h3><p>类似于DOM中的类似方法：<br><code>attchEvent()</code>和<code>dettchEvent()</code>，这两个方法接受两个参数：事件处理程序名称、事件处理程序函数。<br>IE8及以前的版本的只支持事件冒泡，所以通过这种方法添加的事件处理程序之火被添加到冒泡阶段。</p>
+<pre><code>var btn=document.getElementById(&quot;btn&quot;);
+    btn.attachEvent(&quot;onclick&quot;,function(){
+        alert(&quot;Click!&quot;);
+});</code></pre><p>这种方法与DOM0级方法的主要区别是事件处理程序的作用域不同，DOM0级事件处理程序下，事件处理程序会在其所属元素的作用域内运行；在使用attcchEvent()方法时，事件处理程序会在全局作用域中运行</p>
+<hr>
+<h1 id="END"><a href="#END" class="headerlink" title="~END"></a>~END</h1><p>@[toc] </p>
 
       
     </div>
@@ -560,7 +582,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/计算机网络/" rel="tag"><i class="fa fa-tag"></i> 计算机网络</a>
+            <a href="/tags/DOM/" rel="tag"><i class="fa fa-tag"></i> DOM</a>
           
         </div>
       
@@ -573,8 +595,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/09/20/函数柯里化/" rel="next" title="函数柯里化">
-                <i class="fa fa-chevron-left"></i> 函数柯里化
+              <a href="/2019/07/29/字符串的拓展和新增方法/" rel="next" title=" ES6字符串 ">
+                <i class="fa fa-chevron-left"></i>  ES6字符串 
               </a>
             
           </div>
@@ -583,8 +605,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/11/10/函数防抖与节流/" rel="prev" title="函数防抖与节流">
-                函数防抖与节流 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/22/ES6中的变量赋值以及解构赋值/" rel="prev" title=" ES6中的变量声明 ">
+                 ES6中的变量声明  <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -787,7 +809,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP协议和UDP协议"><span class="nav-number">1.</span> <span class="nav-text">TCP协议和UDP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP协议"><span class="nav-number">1.1.</span> <span class="nav-text">TCP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">1.1.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三次握手和四次挥手"><span class="nav-number">1.1.2.</span> <span class="nav-text">三次握手和四次挥手</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#三次握手"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四次挥手"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">四次挥手</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP协议"><span class="nav-number">1.2.</span> <span class="nav-text">UDP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区别"><span class="nav-number">1.3.</span> <span class="nav-text">区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tip"><span class="nav-number">1.3.1.</span> <span class="nav-text">tip</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#事件"><span class="nav-number">1.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是事件？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是事件？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-事件流"><span class="nav-number">1.2.</span> <span class="nav-text">(一)事件流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件冒泡"><span class="nav-number">1.2.1.</span> <span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件捕获"><span class="nav-number">1.2.2.</span> <span class="nav-text">事件捕获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM事件流"><span class="nav-number">1.2.3.</span> <span class="nav-text">DOM事件流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（二）事件处理程序"><span class="nav-number">1.3.</span> <span class="nav-text">（二）事件处理程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML事件处理程序"><span class="nav-number">1.3.1.</span> <span class="nav-text">HTML事件处理程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM0级事件处理程序"><span class="nav-number">1.3.2.</span> <span class="nav-text">DOM0级事件处理程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM2级事件处理程序"><span class="nav-number">1.3.3.</span> <span class="nav-text">DOM2级事件处理程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE事件处理程序"><span class="nav-number">1.3.4.</span> <span class="nav-text">IE事件处理程序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#END"><span class="nav-number">2.</span> <span class="nav-text">~END</span></a></li></ol></div>
             
 
           </div>

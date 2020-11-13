@@ -112,16 +112,23 @@
     }
 </style>
 
-  <meta name="description" content="a front-end engineer who is learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yufeif">
-<meta property="og:url" content="https://fyttto.github.io/page/2/index.html">
+  <meta name="description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。  DOMDOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。">
+<meta name="keywords" content="DOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" JavaScript节点树">
+<meta property="og:url" content="https://fyttto.github.io/2019/07/29/JavaScript节点树/index.html">
 <meta property="og:site_name" content="yufeif">
-<meta property="og:description" content="a front-end engineer who is learning">
+<meta property="og:description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。  DOMDOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190519111142598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_17,color_000000,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190519173859827.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190519173946110.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190519174001278.png">
+<meta property="og:updated_time" content="2020-11-13T01:56:35.913Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yufeif">
-<meta name="twitter:description" content="a front-end engineer who is learning">
+<meta name="twitter:title" content=" JavaScript节点树">
+<meta name="twitter:description" content="由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。  DOMDOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190519111142598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_17,color_000000,t_70">
 
 
 
@@ -129,7 +136,7 @@
 
   
   
-  <link rel="canonical" href="https://fyttto.github.io/page/2/">
+  <link rel="canonical" href="https://fyttto.github.io/2019/07/29/JavaScript节点树/">
 
 
 
@@ -139,7 +146,7 @@
   };
 </script>
 
-  <title>yufeif</title>
+  <title> JavaScript节点树 | yufeif</title>
   
 
 
@@ -187,8 +194,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/fyttto" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -340,549 +346,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2019/07/29/JavaScript事件/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengyufei">
-      <meta itemprop="description" content="a front-end engineer who is learning">
-      <meta itemprop="image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMhc_k4SLYULPc6uU12vLi6zJzRNdqPxfdJnzPRKCgAKJCsv5_g">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yufeif">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/29/JavaScript事件/" class="post-title-link" itemprop="url"> 事件</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-29 15:20:33" itemprop="dateCreated datePublished" datetime="2019-07-29T15:20:33+08:00">2019-07-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-11-13 09:54:54" itemprop="dateModified" datetime="2020-11-13T09:54:54+08:00">2020-11-13</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><h2 id="什么是事件？"><a href="#什么是事件？" class="headerlink" title="什么是事件？"></a>什么是事件？</h2><p>众所周知，我们在写页面时候有时会用到一些<strong>交互</strong>，而交互通常是在<em>JavaScript</em>与<em>HTML</em>之间进行的，进一步说，他们两个的交互就是通过<strong>事件</strong>进行的。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/29/JavaScript事件/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2019/07/29/字符串的拓展和新增方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengyufei">
-      <meta itemprop="description" content="a front-end engineer who is learning">
-      <meta itemprop="image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMhc_k4SLYULPc6uU12vLi6zJzRNdqPxfdJnzPRKCgAKJCsv5_g">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yufeif">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/29/字符串的拓展和新增方法/" class="post-title-link" itemprop="url"> ES6字符串 </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-29 15:20:33" itemprop="dateCreated datePublished" datetime="2019-07-29T15:20:33+08:00">2019-07-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-07-07 11:04:10" itemprop="dateModified" datetime="2020-07-07T11:04:10+08:00">2020-07-07</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在这篇博文里，我们会了解到一些在<code>ES6</code>中的一些字符的新特性。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/29/字符串的拓展和新增方法/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2019/07/29/javaScript高程学习-DOM（二）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fengyufei">
-      <meta itemprop="description" content="a front-end engineer who is learning">
-      <meta itemprop="image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEMhc_k4SLYULPc6uU12vLi6zJzRNdqPxfdJnzPRKCgAKJCsv5_g">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yufeif">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/29/javaScript高程学习-DOM（二）/" class="post-title-link" itemprop="url"> JavaScriptDOM操作</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-29 14:55:10" itemprop="dateCreated datePublished" datetime="2019-07-29T14:55:10+08:00">2019-07-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-11-13 12:07:12" itemprop="dateModified" datetime="2020-11-13T12:07:12+08:00">2020-11-13</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>上一篇介绍了Node类型，那么这一篇我们来继续介绍其他的类型</p>
-</blockquote>
-<h1 id="Document类型"><a href="#Document类型" class="headerlink" title="Document类型"></a>Document类型</h1><p>在JavaScript中，document类型表示文档，根据上一篇我们知道，document的对象是HTMLDocument（继承自Document类型），表示整个HTML实例。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/29/javaScript高程学习-DOM（二）/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -914,10 +380,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/29/JavaScript节点树/" class="post-title-link" itemprop="url"> JavaScript节点树</a>
+          <h1 class="post-title" itemprop="name headline"> JavaScript节点树
+
               
             
           </h1>
@@ -1011,21 +475,66 @@
       
 
       
-        
-          <blockquote>
+        <blockquote>
 <p>由于作者需要进行一些些项目的参加，所以先来学习DOM操作，之前的基础知识暂时没进行学习安排。</p>
 </blockquote>
 <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p><strong>DOM（文档对象模型）是针对HTML和XML文档的一个API（应用程序编程接口）。DOM描绘了一个层次化的节点树，允许开发人员进行添加，移除和修改页面的某一部分。</strong></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/29/JavaScript节点树/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+<a id="more"></a>
+<h2 id="1-节点层次"><a href="#1-节点层次" class="headerlink" title="1.节点层次"></a>1.节点层次</h2><h3 id="DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。"><a href="#DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。" class="headerlink" title="DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。"></a>DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做<em>文档树</em>。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。</h3><p>比如下面一段代码的节点层次表示为</p>
+<pre><code>&lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Sample page&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;Hello Word!&lt;/p&gt;
+        &lt;/body&gt;
+&lt;/html&gt;</code></pre><p><img src="https://img-blog.csdnimg.cn/20190519111142598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzkzOTM3OQ==,size_17,color_000000,t_70" alt="上面代码的文档层次关系"></p>
+<p>文档节点是每个文档的根节点。在这个🌰中文档节点只有一个子节点，就是HTML元素，该元素被称作<strong>文档元素</strong>。文档元素是文档的最外层结构。（每个文档只能有一个文档元素）</p>
+<blockquote>
+<p>在HTML中文档元素始终都是<html>元素。<br>在XML中，没有预定义的元素，文档元素可以是任何元素</html></p>
+</blockquote>
+<p><strong>每一段标记都可以通过树中的一个节点来表示：HTML元素通过元素节点表示，特性通过特性节点表示，文档类型通过文档类型节点来表示，注释类型通过注释节点来表示。</strong></p>
+<h3 id="Node类型"><a href="#Node类型" class="headerlink" title="Node类型"></a>Node类型</h3><h3 id="每一个节点都有一个nodeType属性，用于表明节点的类型。节点类型一共有12种，每一个节点都必属于其中的一个。在这里我们只讲解其中常用的几个节点类型。"><a href="#每一个节点都有一个nodeType属性，用于表明节点的类型。节点类型一共有12种，每一个节点都必属于其中的一个。在这里我们只讲解其中常用的几个节点类型。" class="headerlink" title="每一个节点都有一个nodeType属性，用于表明节点的类型。节点类型一共有12种，每一个节点都必属于其中的一个。在这里我们只讲解其中常用的几个节点类型。"></a>每一个节点都有一个nodeType属性，用于表明节点的类型。节点类型一共有12种，每一个节点都必属于其中的一个。在这里我们只讲解其中常用的几个节点类型。</h3><p>在讲解之前我们必须知道这些节点通常具有的属性</p>
+<blockquote>
+<p>  <strong>属性：1、nodeType ， 表示节点类型</strong><br>   <strong>规则：  1 –&gt;Element类型   , 3 –&gt;Text类型,  8 –&gt;Comment类型  , 9 –&gt;Document类型</strong><br><strong>2. childNodes ，表示子节点集合，可以使用slice方法将NodeList转换为数组</strong><br>3、<strong>nodeName , 取决于节点类型，如果是元素类型，值为元素的标签名</strong><br>4、<strong>nodeValue , 取决于节点类型，如果是元素类型，值为null</strong><br>5、<strong>parentNode，指向文档树中的父节点</strong><br>6、<strong>previousSibling，兄弟节点的前一个节点</strong><br>7、<strong>nextSibling，兄弟节点的下一个节点</strong><br>8、<strong>firstSibling，childsNode列表中的第一个节点</strong><br>9、<strong>ownerDocument，指向表示整个文档的文档节点</strong><br>10、<strong>hasChildNodes，包含一个或多个节点时，返回true</strong></p>
+</blockquote>
+<p><strong>接下来我们来讲下如何访问保存在NodeList（类数组对象，用于保存一组有序的节点）中的节点——可以使用方括号，也可以使用items()方法。</strong></p>
+<pre><code>var firstChild = someNode.childNodes[0];
+var secondChild = someNode.childNodes.item[1];
+var count = someNode.childNodes.length;</code></pre><h3 id="操作节点"><a href="#操作节点" class="headerlink" title="操作节点"></a>操作节点</h3><h4 id="增"><a href="#增" class="headerlink" title="增"></a>增</h4><p>最常用的方法是<strong>appendChild()</strong>，该方法的作用是向childNodes的列表的末尾添加一个节点。添加完成后，appendChild会返回一个新增的节点。<br><img src="https://img-blog.csdnimg.cn/20190519173859827.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190519173946110.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190519174001278.png" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><strong>其次，如果传入的节点已经是原来文档树的一部分了，那么传入的操作会将该节点从原来的位置转移到新位置。</strong></p>
+</blockquote>
+<p>如果在调用时传入的是父元素的<strong>第一个子节点</strong>，那么该节点就会成为父元素的<strong>最后一个子节点</strong>。</p>
+<pre><code>//someNode 有多个节点
+var returnedNode = someNode.appendChild(someNode.firstChild);
+alert(returnedNode == someNode.firstChild);
+alert(returnedNode == someNode.lastChild)；</code></pre><h4 id="插"><a href="#插" class="headerlink" title="插"></a>插</h4><p>插入某一个节点与新增加一个节点的区别就是新节点是否在最后，当然增加也是一种特殊的插入节点的方式。<br>如果想要把节点放在childNodes列表中某个特定的位置上，那么可以使用insertBefore()方法。这个方法接受两个参数：<em>要插入的节点</em>和<em>作为参照的节点</em>。插入节点后，被插入的节点会成为参照节点的<strong>前一个同胞节点</strong>（类似与兄弟元素）</p>
+<pre><code>//插入后成为最后一个子节点
+var returnedNode = someNode,insertBefore(newNode,null);
+alert(new == someNode.lastChild);
+// 插入后成为第一个节点
+var returnedNode = someNode.insertBefore(newNode,someNode,firstChild);
+alert(newNode == newNode);
+alert(newNode == someNode.firstChild);
+// 插入到最后一个子节点前面
+var returnedNode = someNode.insertBefore(newNode,someNode.firstNode);
+alert(newNode == someNode.childNode[someNode.childNodes.length-2]);
+</code></pre><h4 id="改"><a href="#改" class="headerlink" title="改"></a>改</h4><p>前面所讲的两种方式都是只插入节点并不会移除节点，接下来要讲的方法是替换节点：使用replaceChild()方法移除原有节点并将新的节点插入在原来节点的位置，它使用的参数是：<strong>要插入的节点</strong>和<strong>要替换的节点</strong>。</p>
+<pre><code>// 替换第一个子节点
+var returnedNode = someNode.replaceChild(newNode, someNode.fristchild);
+//替换最后一个子节点
+var returnedNode = someNode.replaceChild(newNode,someNode.lastNode);</code></pre><blockquote>
+<p>虽然被替换，但是该节点还是属于文档的，但是在文档中已经没有了它的位置。</p>
+</blockquote>
+<h4 id="删"><a href="#删" class="headerlink" title="删"></a>删</h4><p>修改节点时提到了移除原有节点，那么如何移除原有节点呢？<br>我们可以使用removeChild()方法。这个方法接受一个参数，就是即将要<strong>被移除的节点</strong>。</p>
+<pre><code>//移除第一个子节点
+var  formerFirstChild = someNode.removeChild(someNode.firstChild);
+//移除嘴都一个子节点
+var formerLastChild = someNode.removeChild(someNode.lastChild);</code></pre><blockquote>
+<p><strong>这几种方法可以让我们很简单的操作节点，但是有一个前提就是必须要先取到父节点，否则将会导致错误发生。</strong></p>
+</blockquote>
+
       
     </div>
 
@@ -1046,14 +555,36 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/DOM/" rel="tag"><i class="fa fa-tag"></i> DOM</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/29/javaScript高程学习-DOM（二）/" rel="prev" title=" JavaScriptDOM操作">
+                 JavaScriptDOM操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -1063,18 +594,15 @@
   </article>
 
 
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1094,8 +622,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1233,6 +770,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM"><span class="nav-number">1.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-节点层次"><span class="nav-number">1.1.</span> <span class="nav-text">1.节点层次</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。"><span class="nav-number">1.1.1.</span> <span class="nav-text">DOM可以将任何HTML和XML的文档描绘成一个有多个节点构成的结构，这个层次结构可以被叫做文档树。节点之间的各种关系可以用传统的家族关系来描述，相当于把文档树比作家谱。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node类型"><span class="nav-number">1.1.2.</span> <span class="nav-text">Node类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每一个节点都有一个nodeType属性，用于表明节点的类型。节点类型一共有12种，每一个节点都必属于其中的一个。在这里我们只讲解其中常用的几个节点类型。"><span class="nav-number">1.1.3.</span> <span class="nav-text">每一个节点都有一个nodeType属性，用于表明节点的类型。节点类型一共有12种，每一个节点都必属于其中的一个。在这里我们只讲解其中常用的几个节点类型。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作节点"><span class="nav-number">1.1.4.</span> <span class="nav-text">操作节点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#增"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">插</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">删</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -1360,6 +914,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -1375,6 +933,8 @@
 
   
 
+
+  
 
 
   
