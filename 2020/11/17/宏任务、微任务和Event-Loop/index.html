@@ -112,18 +112,24 @@
     }
 </style>
 
-  <meta name="description" content="深浅拷贝我们处理数据的时候经常需要拷贝(copy)数据，那你们知道什么是深拷贝和什么是浅拷贝嘛？面试的时候也会经常问的，嘻嘻嘻，今天我们就来谈谈这个深浅拷贝。">
-<meta name="keywords" content="JavaScript">
+  <meta name="description" content="宏任务,微任务和EventLoop这么长时间的前端学习，我们有没有好好了解过我们最熟悉的，同时也是最陌生的浏览器，今天我们就来看看到底我们浏览器内部是怎么为我们执行我们的指令的。">
+<meta name="keywords" content="浏览器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈深浅拷贝">
-<meta property="og:url" content="https://fyttto.github.io/2020/11/16/浅谈深浅拷贝/index.html">
+<meta property="og:title" content="宏任务、微任务和Event Loop">
+<meta property="og:url" content="https://fyttto.github.io/2020/11/17/宏任务、微任务和Event-Loop/index.html">
 <meta property="og:site_name" content="yufeif">
-<meta property="og:description" content="深浅拷贝我们处理数据的时候经常需要拷贝(copy)数据，那你们知道什么是深拷贝和什么是浅拷贝嘛？面试的时候也会经常问的，嘻嘻嘻，今天我们就来谈谈这个深浅拷贝。">
+<meta property="og:description" content="宏任务,微任务和EventLoop这么长时间的前端学习，我们有没有好好了解过我们最熟悉的，同时也是最陌生的浏览器，今天我们就来看看到底我们浏览器内部是怎么为我们执行我们的指令的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-11-16T14:59:37.032Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/3/23/1710555c386c5c78?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/3/23/1710556870820bd6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/3/23/1710556d5509ef63?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/3/23/171055711f3b0aac?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="file:///C:%5CUsers%5C24344%5CAppData%5CLocal%5CTemp%5Cqqpyimg1605619014.jpg">
+<meta property="og:updated_time" content="2020-11-17T13:23:28.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈深浅拷贝">
-<meta name="twitter:description" content="深浅拷贝我们处理数据的时候经常需要拷贝(copy)数据，那你们知道什么是深拷贝和什么是浅拷贝嘛？面试的时候也会经常问的，嘻嘻嘻，今天我们就来谈谈这个深浅拷贝。">
+<meta name="twitter:title" content="宏任务、微任务和Event Loop">
+<meta name="twitter:description" content="宏任务,微任务和EventLoop这么长时间的前端学习，我们有没有好好了解过我们最熟悉的，同时也是最陌生的浏览器，今天我们就来看看到底我们浏览器内部是怎么为我们执行我们的指令的。">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2020/3/23/1710555c386c5c78?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 
 
 
@@ -131,7 +137,7 @@
 
   
   
-  <link rel="canonical" href="https://fyttto.github.io/2020/11/16/浅谈深浅拷贝/">
+  <link rel="canonical" href="https://fyttto.github.io/2020/11/17/宏任务、微任务和Event-Loop/">
 
 
 
@@ -141,7 +147,7 @@
   };
 </script>
 
-  <title>浅谈深浅拷贝 | yufeif</title>
+  <title>宏任务、微任务和Event Loop | yufeif</title>
   
 
 
@@ -358,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2020/11/16/浅谈深浅拷贝/">
+    <link itemprop="mainEntityOfPage" href="https://fyttto.github.io/2020/11/17/宏任务、微任务和Event-Loop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fengyufei">
@@ -375,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈深浅拷贝
+          <h1 class="post-title" itemprop="name headline">宏任务、微任务和Event Loop
 
               
             
@@ -401,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2020-11-16 20:49:55 / 修改时间：22:59:37" itemprop="dateCreated datePublished" datetime="2020-11-16T20:49:55+08:00">2020-11-16</time>
+              <time title="创建时间：2020-11-17 18:20:54 / 修改时间：21:23:28" itemprop="dateCreated datePublished" datetime="2020-11-17T18:20:54+08:00">2020-11-17</time>
             
 
             
@@ -458,96 +464,166 @@
       
 
       
-        <h1 id="深浅拷贝"><a href="#深浅拷贝" class="headerlink" title="深浅拷贝"></a>深浅拷贝</h1><p>我们处理数据的时候经常需要拷贝(copy)数据，那你们知道什么是深拷贝和什么是浅拷贝嘛？面试的时候也会经常问的，嘻嘻嘻，今天我们就来谈谈这个深浅拷贝。</p>
+        <h1 id="宏任务-微任务和EventLoop"><a href="#宏任务-微任务和EventLoop" class="headerlink" title="宏任务,微任务和EventLoop"></a>宏任务,微任务和<code>EventLoop</code></h1><p>这么长时间的前端学习，我们有没有好好了解过我们最熟悉的，同时也是最陌生的浏览器，今天我们就来看看到底我们浏览器内部是怎么为我们执行我们的指令的。</p>
 <a id="more"></a>
 
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>我们先来说一下这两个的区别，相信看了区别，大家就能立马理解什么是深拷贝，什么是浅拷贝了。</p>
-<p>我们在拷贝数组时候可能会这样做：</p>
-<pre><code class="javascript">var arr1=[1,2,3,4];
-var arr2=[];
-for(let i in arr1){
-    arr2[i]=arr[i];
-}
-console.log(arr2);//[1,2,3,4]</code></pre>
-<p>数组拷贝好简单呀，这其实就是<strong>浅拷贝——拷贝的级别浅</strong>。</p>
-<p>那么对象也是一样的嘛，让我们来试一试。</p>
-<pre><code class="javascript">var obj={
-    name:&#39;张三&#39;,
-    age:12,
-    hobby:{
-       book:&#39;math&#39;,
-       class:&#39;PE&#39;
-    }
-}
-var newObj={};
-for(let key in obj){
-    newObj[key]=obj[key]
-}
-newObj.hobby.book=&#39;Chinese&#39;;
-console.log(newObj);  //{ name: &#39;张三&#39;, age: 12, hobby: { book: &#39;Chinese&#39;, class: &#39;PE&#39; } }
-console.log(obj);     //{ name: &#39;张三&#39;, age: 12, hobby: { book: &#39;Chinese&#39;, class: &#39;PE&#39; } }</code></pre>
-<p>这个时候，怎么不仅我更改属性的对象值变了，原对象的属性值也发生了改变，说明我们并没有实现真正意义上的拷贝，只是将对象的指针拿过来借用了一下而已。那我们就只能换一种思路了，这时候我们就应该拿出我们的深拷贝了，递归调用深拷贝实现，更深的一些属性的访问。</p>
-<p><code>JavaScript</code>的基本类型不会出现使用深拷贝的情况，所以深拷贝只适用于引用类型。</p>
-<p>好了我们来正(<code>xia</code>)式(<code>shuo</code>)的讲一讲这两个的区别吧：</p>
-<p>浅拷贝在复制对象的时候，只能对对象的第一层键值进行复制，如果在更深层还有键值，就只能复制属性的地址值。</p>
-<p>深拷贝是指在复制对象的时候完全的拷贝一份对象，即使嵌套了对象，两者也是相互分离的，修改一个对象的属性，另一个不会被修改。想要复制更深层的属性，只需要一直递归下去即可。</p>
-<h2 id="浅拷贝（shallowCopy）"><a href="#浅拷贝（shallowCopy）" class="headerlink" title="浅拷贝（shallowCopy）"></a>浅拷贝（<code>shallowCopy</code>）</h2><h3 id="数组浅拷贝"><a href="#数组浅拷贝" class="headerlink" title="数组浅拷贝"></a>数组浅拷贝</h3><p><strong>数组浅拷贝的方法</strong></p>
-<pre><code class="javascript">//（1）使用数组的concat方法
-var arr=[1,2,3,4,5];
-var newArr=[];
-newArr.concat(arr);
-console.log(newArr);
+<h2 id="javaScript是单线程的语言"><a href="#javaScript是单线程的语言" class="headerlink" title="javaScript是单线程的语言"></a><code>javaScript</code>是单线程的语言</h2><p>首先，我们要知道<code>javaScript</code>是一门单线程的脚本语言，这个是什么意思呢？</p>
+<p>就是在一行代码执行过程中，必然不会存在同步执行的另一行代码。所以当代码全部是同步执行的时候，将会有很混乱的问题，比如我们从远端获取一些数据， 如果立即获取数据的话，这个时候是无法获取到数据的。</p>
+<p>所以就有了异步事件的概念，注册一个回调函数，发一个网络请求，我们告诉主程序等到接收到数据之后执行相应的操作，然后我们这段时间就可以去执行其他的操作了。异步完成后，会执行到相应的操作。</p>
+<h2 id="宏任务和微任务的区别"><a href="#宏任务和微任务的区别" class="headerlink" title="宏任务和微任务的区别"></a>宏任务和微任务的区别</h2><p>举个🌰（例子）：</p>
+<p>在我们去银行办业务的时候，我们往往都会先去排队取号，取号排队的每一个客人都是一个宏任务，当柜员处理完一个客户的问题之后，就会叫下一个客户，这也是下一个宏任务的开始。</p>
+<p>多个宏任务合在一起就可以看做是一个任务队列在这，里面存的是银行内所有正在排号的客户。</p>
+<p>任务队列中的都是已经完成的异步操作，而不是注册一个异步任务都会被放在这个任务队列中，就像在银行中排号，如果轮到你的号的时候，你不在，那么你的号就作废了，回来的时候还需要重新排队。</p>
+<p>我们每一个人办完业务之后，柜员可能会问我们是否还需要投资新的其他的理财项目，如果我们有想法的话，柜员肯定不会让我们去旁边再次排队取号的，比如买点纪念币，办点理财等等，这些都可认为是微任务。</p>
+<blockquote>
+<p>当前的微任务没有执行完毕之前，不会执行下一个宏任务。</p>
+</blockquote>
+<p>我们现在来看看经常出现在面试和许多大佬的<code>blog</code>中的一个代码片段：</p>
+<pre><code class="javascript">setTimeout(_ =&gt; console.log(4))
 
-//(2)使用数组的slice方法
-var arr=[1,2,3,4,5,6];
-var newArr=arr.slice();
-console.log(newArr);</code></pre>
-<h3 id="对象浅拷贝"><a href="#对象浅拷贝" class="headerlink" title="对象浅拷贝"></a>对象浅拷贝</h3><p>对象浅拷贝就需要用到一个方法<code>Object.assign()</code>，这个方法可以吧任意多个源对象可枚举属性拷贝给目标对象，然后返回目标对象。</p>
-<pre><code class="javascript">let arr={
-    a:1,
-    b:2,
-    c:3
-}
-let newArr=Object.assign({},arr);
-newArr.d=5;
-console.log(arr);  //{a:1, b:2,c:3}
-console.log(newArr);//{a:1, b:2,c:3,d:5}</code></pre>
-<h2 id="深拷贝-deepCopy"><a href="#深拷贝-deepCopy" class="headerlink" title="深拷贝(deepCopy)"></a>深拷贝(<code>deepCopy</code>)</h2><p><strong>数组深拷贝</strong></p>
-<p>这个方法不仅适用于数组，还适用于对象。</p>
-<pre><code class="javascript">//这里有个对象浅拷贝的小技巧，但是有个小问题就是这个方法无法拷贝函数
- let name = {
-    a: 1,
-    b: {
-         c: 2
-     }
- }
- let newObj=JSON.parse(JSON.stringfy(name));
-name.b.c=12;
-console.log(name); //{a: 1,b: {c: 2 }}
-console.log(newObj); //{a: 1,b: {c: 12 }}</code></pre>
-<h2 id="封装函数"><a href="#封装函数" class="headerlink" title="封装函数"></a>封装函数</h2><p>好了说了这么多，我们就把这两个深浅拷贝封装一下吧，方便我们随时使用，嘻嘻嘻。</p>
-<h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p>思路：首先判断是否是引用类型，只拷贝引用类型的值。其次遍历对象，把属性和属性值都放在一个新的对象里。</p>
-<pre><code class="javascript">let  shallowCopy=function(obj){
-    if(typeof obj!= &#39;object&#39;) return ;
-    let newObj=obj instanceof Array? []:{};
-    for(let key in obj){
-        if(obj.hasOwnProperty(key)){
-            newObj[key]=obj[key];
-        }
-    }
-    return newObj;
-}</code></pre>
-<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p>思路：拷贝的时候判断一下属性值的类型，如果是对象，递归调用深拷贝函数即可。</p>
-<pre><code class="javascript">let deepCopy=function(obj){
-    if(typeof obj!=&#39;object&#39;) return ;
-    let newObj=obj instanceof Array? []:{};
-    for(let key in obj){
-        if(obj.hasOwnProperty(key)){
-            newObj[key]=typeof obj[key]===&#39;object&#39;? deepCopy(obj[key]):obj[key];        
-        }
-    } 
-    return newObj;
-}</code></pre>
+new Promise(resolve =&gt; {
+  resolve()
+  console.log(1)
+}).then(_ =&gt; {
+  console.log(3)
+})
+
+console.log(2)</code></pre>
+<p>面试管经常可能会问我们这段代码会输出什么？</p>
+<p><strong><code>setTimeOut</code>是作为宏任务</strong>存在的，而<strong><code>promise.then/catch/finally</code>则是具有代表性的微任务</strong>，上述代码的执行顺序就是按照序号来输出的，因为<strong><code>new Promise</code>在实例化的过程中所执行的代码都是同步进行</strong>的，而<strong><code>then</code>中注册的回调才是异步</strong>进行的。</p>
+<p>所以，我们需要明白哪些是宏任务，哪些是微任务就变得很关键。</p>
+<h3 id="宏任务"><a href="#宏任务" class="headerlink" title="宏任务"></a>宏任务</h3><table>
+<thead>
+<tr>
+<th align="center">#</th>
+<th align="center">浏览器</th>
+<th align="center">Node</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>I/O</code></td>
+<td align="center">Y</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center"><code>setTimeOut</code></td>
+<td align="center">Y</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center"><code>setInterval</code></td>
+<td align="center">Y</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center"><code>setImmediate</code></td>
+<td align="center">N</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+<td align="center"><code>requestAnimationFrame</code></td>
+<td align="center">Y</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center"><code>UI事件</code></td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+</tr>
+</tbody></table>
+<h3 id="微任务"><a href="#微任务" class="headerlink" title="微任务"></a>微任务</h3><table>
+<thead>
+<tr>
+<th align="center">#</th>
+<th align="center">浏览器</th>
+<th align="center">Node</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>process.nextTick</code></td>
+<td align="center">N</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+<td align="center"><code>MutationObserver</code></td>
+<td align="center">Y</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center"><code>promise.then catch finally</code></td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+<td align="center"><code>Object.observe</code></td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event-Loop"></a>Event-Loop</h3><p>我们有了宏任务，微任务的概念，现在我们来看看到底什么东东是<code>Event-Loop</code>。</p>
+<p>在浏览器执行任务的过程中，有很多的宏任务，也有很多的微任务，什么时候执行宏任务，什么时候执行微任务就是我们该考虑的，也需要有一个判断逻辑存在。</p>
+<p>在处理玩一个任务之后，柜员就会问是否还有其他需要办理的业务<strong>（检查还有没有微任务需要处理）</strong>；客户说没有事请之后，柜员就去查看还有没有别的客户等着办业务<strong>（检查还有没有宏任务需要处理）</strong>。这个检查的过程是<strong>持续进行</strong>的，每完成一个任务就会进行一次，这样的操作就叫做<code>Event-Loop</code>。</p>
+<h2 id="浏览器中的表现"><a href="#浏览器中的表现" class="headerlink" title="浏览器中的表现"></a>浏览器中的表现</h2><p>在浏览器中，<strong>宏任务是在微任务之后才执行的</strong>（其实微任务实际上是宏任务的其中一个步骤）。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/23/1710555c386c5c78?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></p>
+<p>流程讲解如下：</p>
+<ol>
+<li><p>浏览器执行任务前会判断执行的任务是同步任务还是异步任务；</p>
+</li>
+<li><p>同步任务则会一直执行到结束；</p>
+</li>
+<li><p>遇到异步就将它交给对应的异步队列，自己执行同步任务；</p>
+</li>
+<li><p>异步线程执行异步<code>API</code>，执行完成后，将异步回调事件放入事件队列上；</p>
+</li>
+<li><p>主线程的同步队列任务执行完之后回去事件队列看有没有任务；</p>
+</li>
+<li><p>主线程发现事件队列有任务，救取出里面的任务执行；</p>
+</li>
+<li><p>主线程不断循环上述流程；</p>
+</li>
+<li></li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/23/1710556870820bd6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></p>
+<ol>
+<li>一个Event Loop可以有一个或多个事件队列，但是只有一个微任务队列。</li>
+<li>微任务队列全部执行完会重新渲染一次</li>
+<li>每个宏任务执行完都会重新渲染一次</li>
+<li><code>requestAnimationFrame</code>处于渲染阶段，不在微任务队列，也不在宏任务队列</li>
+</ol>
+<h2 id="Node-js的Event-Loop"><a href="#Node-js的Event-Loop" class="headerlink" title="Node.js的Event-Loop"></a><code>Node.js</code>的Event-Loop</h2><p><code>Node.js</code>是运行在服务端的<code>js</code>，所以他的服务目的和运行环境不同，导致了它的<code>API</code>和原生<code>JS</code>有些不同，它的<code>Event-Loop</code>还需要处理一些<code>I/O</code>，所以与浏览器<code>Event-Loop</code>也是不一样的。<code>Node</code>的<code>Event-Loop</code>是分阶段的，如下图所示：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/23/1710556d5509ef63?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="image-20200322203318743"></p>
+<ol>
+<li>timers:执行<code>setTimeOut</code>和<code>setInterval</code>的回调</li>
+<li>pending callbacks:执行延迟到下一个循环迭代的<code>I/O</code>回调</li>
+<li>idle,prepare：仅系统内部使用</li>
+<li>poll：检索新的I/O事件；执行相关I/o的回调，事实上除了其他几个阶段的事情，几乎所有的异步都在这个阶段处理</li>
+<li>check：<code>setImmdiate</code>在这里执行</li>
+<li>close callbacks:一些关闭的回调函数，如<code>socket.on(&#39;close&#39;,...)</code></li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/23/171055711f3b0aac?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></p>
+<h3 id="setImmdiate和setTimeout"><a href="#setImmdiate和setTimeout" class="headerlink" title="setImmdiate和setTimeout"></a><code>setImmdiate</code>和<code>setTimeout</code></h3><p>官方文档的定义，<code>setImmediate</code>为一次<code>Event-Loop</code>执行结束后调用；</p>
+<p><code>setTimeout</code>是计算一个延迟时间后进行的执行。</p>
+<pre><code class="javascript">setTimeout(()={
+    setTimeout(_ =&gt; console.log(&#39;setTimeout&#39;))
+    setImmediate(_ =&gt; console.log(&#39;setImmediate&#39;))
+    },0);</code></pre>
+<p>大家有兴趣的可以自己下去试试，这两行代码执行多次会得到不同的值。</p>
+<p>啊啊啊，这我刚看懂了前面的又来了这个东西，怎么又出现了这个东西。我们来慢慢分析一下这个小东西。</p>
+<blockquote>
+<ol>
+<li>外层是一个<code>setTimeout</code>，所以执行的他的回调的时候已经在<code>timers</code>；</li>
+<li>处理里面的<code>setTimeout</code>，因为本次循环的<code>timers</code>，正在执行，所以他的回调其实是加到了<code>timers</code>；</li>
+<li>处理里面的<code>setImmdiate</code>，将它的回调加入<code>check</code>阶段队列</li>
+<li>外层的<code>timers</code>阶段执行完，进入<code>pending callbacks</code>，<code>idle, prepare</code>，<code>poll</code>，这几个队列都是空的，所以继续往下</li>
+<li>到了<code>check</code>阶段，发现了<code>setImmdiate</code>的回调，拿出来执行</li>
+<li>然后是<code>close callbacks</code>，队列是空的，跳过</li>
+<li>又到了<code>timers</code>阶段，执行我们的打印</li>
+</ol>
+</blockquote>
+<h3 id="process-nextTick"><a href="#process-nextTick" class="headerlink" title="process.nextTick()"></a><code>process.nextTick()</code></h3><p><code>process.nextTick()</code>是一个特殊的<code>API</code>，遇到<code>process.nextTick()</code>的时候，<code>Event-Loop</code>会立即停下来执行<code>process.nextTick()</code>，执行完之后才会继续执行<code>Event-Loop</code>。</p>
+<p><img src="file:///C:%5CUsers%5C24344%5CAppData%5CLocal%5CTemp%5Cqqpyimg1605619014.jpg" alt="img">，这就是事件循环的所有知识了。</p>
+<p>希望大家能有所指导，俺小菜鸡的理解还比较浅。</p>
 
       
     </div>
@@ -571,7 +647,7 @@ console.log(newObj); //{a: 1,b: {c: 12 }}</code></pre>
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+            <a href="/tags/浏览器/" rel="tag"><i class="fa fa-tag"></i> 浏览器</a>
           
         </div>
       
@@ -584,8 +660,8 @@ console.log(newObj); //{a: 1,b: {c: 12 }}</code></pre>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/11/14/从URL到页面加载/" rel="next" title="从URL到页面加载">
-                <i class="fa fa-chevron-left"></i> 从URL到页面加载
+              <a href="/2020/11/17/实现继承的几种方式/" rel="next" title="实现继承的几种方式">
+                <i class="fa fa-chevron-left"></i> 实现继承的几种方式
               </a>
             
           </div>
@@ -593,10 +669,6 @@ console.log(newObj); //{a: 1,b: {c: 12 }}</code></pre>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/11/17/实现继承的几种方式/" rel="prev" title="实现继承的几种方式">
-                实现继承的几种方式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -800,7 +872,7 @@ console.log(newObj); //{a: 1,b: {c: 12 }}</code></pre>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#深浅拷贝"><span class="nav-number">1.</span> <span class="nav-text">深浅拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区别"><span class="nav-number">1.1.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浅拷贝（shallowCopy）"><span class="nav-number">1.2.</span> <span class="nav-text">浅拷贝（shallowCopy）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组浅拷贝"><span class="nav-number">1.2.1.</span> <span class="nav-text">数组浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象浅拷贝"><span class="nav-number">1.2.2.</span> <span class="nav-text">对象浅拷贝</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深拷贝-deepCopy"><span class="nav-number">1.3.</span> <span class="nav-text">深拷贝(deepCopy)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装函数"><span class="nav-number">1.4.</span> <span class="nav-text">封装函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浅拷贝"><span class="nav-number">1.4.1.</span> <span class="nav-text">浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深拷贝"><span class="nav-number">1.4.2.</span> <span class="nav-text">深拷贝</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#宏任务-微任务和EventLoop"><span class="nav-number">1.</span> <span class="nav-text">宏任务,微任务和EventLoop</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#javaScript是单线程的语言"><span class="nav-number">1.1.</span> <span class="nav-text">javaScript是单线程的语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宏任务和微任务的区别"><span class="nav-number">1.2.</span> <span class="nav-text">宏任务和微任务的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#宏任务"><span class="nav-number">1.2.1.</span> <span class="nav-text">宏任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微任务"><span class="nav-number">1.2.2.</span> <span class="nav-text">微任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Event-Loop"><span class="nav-number">1.2.3.</span> <span class="nav-text">Event-Loop</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器中的表现"><span class="nav-number">1.3.</span> <span class="nav-text">浏览器中的表现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js的Event-Loop"><span class="nav-number">1.4.</span> <span class="nav-text">Node.js的Event-Loop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#setImmdiate和setTimeout"><span class="nav-number">1.4.1.</span> <span class="nav-text">setImmdiate和setTimeout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#process-nextTick"><span class="nav-number">1.4.2.</span> <span class="nav-text">process.nextTick()</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
