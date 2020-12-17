@@ -120,16 +120,15 @@
 <meta property="og:site_name" content="yufeif">
 <meta property="og:description" content="宏任务,微任务和EventLoop这么长时间的前端学习，我们有没有好好了解过我们最熟悉的，同时也是最陌生的浏览器，今天我们就来看看到底我们浏览器内部是怎么为我们执行我们的指令的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/3/23/1710555c386c5c78?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/3/23/1710556870820bd6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/3/23/1710556d5509ef63?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/3/23/171055711f3b0aac?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:image" content="file:///C:%5CUsers%5C24344%5CAppData%5CLocal%5CTemp%5Cqqpyimg1605619014.jpg">
-<meta property="og:updated_time" content="2020-11-17T13:27:10.440Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/3f15a7c0d1cc61f2b86b748a8e620515.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/5f686039b7791ce071cfc2720eef63dc.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/450e3b3f42f1593497110bf2b09c1a3b.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/8cdeadd94845cda757329efcf2753af7.png">
+<meta property="og:updated_time" content="2020-12-17T08:19:42.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="宏任务、微任务和Event Loop">
 <meta name="twitter:description" content="宏任务,微任务和EventLoop这么长时间的前端学习，我们有没有好好了解过我们最熟悉的，同时也是最陌生的浏览器，今天我们就来看看到底我们浏览器内部是怎么为我们执行我们的指令的。">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2020/3/23/1710555c386c5c78?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/img_convert/3f15a7c0d1cc61f2b86b748a8e620515.png">
 
 
 
@@ -407,12 +406,24 @@
                 
               
 
-              <time title="创建时间：2020-11-17 18:20:54 / 修改时间：21:27:10" itemprop="dateCreated datePublished" datetime="2020-11-17T18:20:54+08:00">2020-11-17</time>
+              <time title="创建时间：2020-11-17 18:20:54" itemprop="dateCreated datePublished" datetime="2020-11-17T18:20:54+08:00">2020-11-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-12-17 16:19:42" itemprop="dateModified" datetime="2020-12-17T16:19:42+08:00">2020-12-17</time>
               
             
           </span>
@@ -565,7 +576,7 @@ console.log(2)</code></pre>
 <p>在浏览器执行任务的过程中，有很多的宏任务，也有很多的微任务，什么时候执行宏任务，什么时候执行微任务就是我们该考虑的，也需要有一个判断逻辑存在。</p>
 <p>在处理玩一个任务之后，柜员就会问是否还有其他需要办理的业务<strong>（检查还有没有微任务需要处理）</strong>；客户说没有事请之后，柜员就去查看还有没有别的客户等着办业务<strong>（检查还有没有宏任务需要处理）</strong>。这个检查的过程是<strong>持续进行</strong>的，每完成一个任务就会进行一次，这样的操作就叫做<code>Event-Loop</code>。</p>
 <h2 id="浏览器中的表现"><a href="#浏览器中的表现" class="headerlink" title="浏览器中的表现"></a>浏览器中的表现</h2><p>在浏览器中，<strong>宏任务是在微任务之后才执行的</strong>（其实微任务实际上是宏任务的其中一个步骤）。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/3/23/1710555c386c5c78?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3f15a7c0d1cc61f2b86b748a8e620515.png" alt="img"></p>
 <p>流程讲解如下：</p>
 <ol>
 <li><p>浏览器执行任务前会判断执行的任务是同步任务还是异步任务；</p>
@@ -582,9 +593,8 @@ console.log(2)</code></pre>
 </li>
 <li><p>主线程不断循环上述流程；</p>
 </li>
-<li></li>
 </ol>
-<p><img src="https://user-gold-cdn.xitu.io/2020/3/23/1710556870820bd6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5f686039b7791ce071cfc2720eef63dc.png" alt></p>
 <ol>
 <li>一个Event Loop可以有一个或多个事件队列，但是只有一个微任务队列。</li>
 <li>微任务队列全部执行完会重新渲染一次</li>
@@ -592,7 +602,7 @@ console.log(2)</code></pre>
 <li><code>requestAnimationFrame</code>处于渲染阶段，不在微任务队列，也不在宏任务队列</li>
 </ol>
 <h2 id="Node-js的Event-Loop"><a href="#Node-js的Event-Loop" class="headerlink" title="Node.js的Event-Loop"></a><code>Node.js</code>的Event-Loop</h2><p><code>Node.js</code>是运行在服务端的<code>js</code>，所以他的服务目的和运行环境不同，导致了它的<code>API</code>和原生<code>JS</code>有些不同，它的<code>Event-Loop</code>还需要处理一些<code>I/O</code>，所以与浏览器<code>Event-Loop</code>也是不一样的。<code>Node</code>的<code>Event-Loop</code>是分阶段的，如下图所示：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/3/23/1710556d5509ef63?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="image-20200322203318743"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/450e3b3f42f1593497110bf2b09c1a3b.png" alt="img"></p>
 <ol>
 <li>timers:执行<code>setTimeOut</code>和<code>setInterval</code>的回调</li>
 <li>pending callbacks:执行延迟到下一个循环迭代的<code>I/O</code>回调</li>
@@ -601,7 +611,7 @@ console.log(2)</code></pre>
 <li>check：<code>setImmdiate</code>在这里执行</li>
 <li>close callbacks:一些关闭的回调函数，如<code>socket.on(&#39;close&#39;,...)</code></li>
 </ol>
-<p><img src="https://user-gold-cdn.xitu.io/2020/3/23/171055711f3b0aac?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8cdeadd94845cda757329efcf2753af7.png" alt></p>
 <h3 id="setImmdiate和setTimeout"><a href="#setImmdiate和setTimeout" class="headerlink" title="setImmdiate和setTimeout"></a><code>setImmdiate</code>和<code>setTimeout</code></h3><p>官方文档的定义，<code>setImmediate</code>为一次<code>Event-Loop</code>执行结束后调用；</p>
 <p><code>setTimeout</code>是计算一个延迟时间后进行的执行。</p>
 <pre><code class="javascript">setTimeout(()={
@@ -622,7 +632,6 @@ console.log(2)</code></pre>
 </ol>
 </blockquote>
 <h3 id="process-nextTick"><a href="#process-nextTick" class="headerlink" title="process.nextTick()"></a><code>process.nextTick()</code></h3><p><code>process.nextTick()</code>是一个特殊的<code>API</code>，遇到<code>process.nextTick()</code>的时候，<code>Event-Loop</code>会立即停下来执行<code>process.nextTick()</code>，执行完之后才会继续执行<code>Event-Loop</code>。</p>
-<p><img src="file:///C:%5CUsers%5C24344%5CAppData%5CLocal%5CTemp%5Cqqpyimg1605619014.jpg" alt="img">，这就是事件循环的所有知识了。</p>
 <p>希望大家能有所指导，俺小菜鸡的理解还比较浅。</p>
 
       
